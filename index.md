@@ -41,6 +41,6 @@ Download Resume (PDF)
 ## Contact
 - LinkedIn: https://linkedin.com/in/yourprofile
 - GitHub: https://github.com/yourusername
-- Email: your@email.com
+- Email: your @email.com
 
 
