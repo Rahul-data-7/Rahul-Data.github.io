@@ -1,265 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rahul | Data Analyst</title>
+<meta charset="UTF-8">
+<title>Rahul | Data Analyst</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <style>
-    :root {
-      --primary: #2563eb;     /* Blue accent (video-like) */
-      --bg: #f9fafb;          /* Light background */
-      --card: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-    }
+<style>
+:root {
+  --primary: #2563eb;
+  --glass: rgba(255,255,255,0.15);
+  --blur: blur(12px);
+  --bg: #0f172a;
+  --text: #e5e7eb;
+}
 
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-    body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-    }
+body {
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: var(--text);
+  scroll-behavior: smooth;
+}
 
-    a {
-      text-decoration: none;
-      color: var(--primary);
-      font-weight: 500;
-    }
+/* NAVBAR */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 18px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--glass);
+  backdrop-filter: var(--blur);
+  z-index: 999;
+}
 
-    /* NAVBAR */
-    nav {
-      position: sticky;
-      top: 0;
-      background: #ffffffcc;
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid #e5e7eb;
-      z-index: 100;
-    }
+header h1 {
+  color: white;
+}
 
-    nav .nav-container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+nav a {
+  color: #cbd5f5;
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
 
-    nav a {
-      margin-left: 20px;
-      color: var(--text);
-    }
+nav a:hover {
+  color: var(--primary);
+}
 
-    /* HERO */
-    .hero {
-      max-width: 1100px;
-      margin: auto;
-      padding: 80px 20px;
-      display: flex;
-      align-items: center;
-      gap: 50px;
-    }
+/* SECTIONS */
+section {
+  padding: 120px 80px;
+}
 
-    .hero img {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #e5e7eb;
-    }
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
 
-    .hero h1 {
-      font-size: 2.6rem;
-      margin: 0;
-    }
+.avatar {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  background:
+    linear-gradient(#020617, #020617) padding-box,
+    linear-gradient(135deg, #2563eb, #38bdf8) border-box;
+}
 
-    .hero p {
-      color: var(--muted);
-      max-width: 500px;
-    }
+.hero h2 {
+  font-size: 52px;
+}
 
-    .buttons a {
-      display: inline-block;
-      margin-right: 15px;
-      margin-top: 15px;
-      padding: 10px 22px;
-      border-radius: 25px;
-      background: var(--primary);
-      color: white;
-      transition: 0.3s;
-    }
+.hero p {
+  color: #94a3b8;
+  margin: 15px 0 30px;
+  font-size: 18px;
+}
 
-    .buttons a.secondary {
-      background: transparent;
-      color: var(--primary);
-      border: 2px solid var(--primary);
-    }
+.btn {
+  padding: 14px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 15px;
+  transition: 0.3s;
+}
 
-    .buttons a:hover {
-      transform: translateY(-2px);
-      opacity: 0.9;
-    }
+.primary {
+  background: var(--primary);
+  color: white;
+}
 
-    /* SECTIONS */
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 70px 20px;
-    }
+.primary:hover {
+  transform: scale(1.05);
+}
 
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 30px;
-    }
+.outline {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
 
-    /* SKILLS */
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
+.outline:hover {
+  background: var(--primary);
+  color: white;
+}
 
-    .skill {
-      background: var(--card);
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-    }
-
-    /* PROJECTS */
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-
-    .project {
-      background: var(--card);
-      padding: 25px;
-      border-radius: 14px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-      transition: 0.3s;
-    }
-
-    .project:hover {
-      transform: translateY(-6px);
-    }
-
-    .project a {
-      display: inline-block;
-      margin-top: 10px;
-    }
-
-    /* CONTACT */
-    .contact a {
-      display: inline-block;
-      margin-right: 20px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: var(--muted);
-    }
-
-    @media(max-width: 768px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- NAV -->
-  <nav>
-    <div class="nav-container">
-      <strong>Rahul</strong>
-      <div>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <div class="hero">
-    <img src="https://via.placeholder.com/180" alt="Profile Photo">
-    <div>
-      <h1>Rahul Tellapuram</h1>
-      <p>Data Analyst | SQL • Python • Power BI<br>MS in Business Analytics</p>
-
-      <div class="buttons">
-        <a href="#projects">View Projects</a>
-        <a href="resume.pdf" class="secondary" target="_blank">Resume</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      Data Analyst with a Master’s degree in Business Analytics, focused on turning data into
-      actionable business insights using SQL, Python, Excel, and Power BI.
-    </p>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill">SQL (Joins, Window Functions)</div>
-      <div class="skill">Python (Pandas, NumPy)</div>
-      <div class="skill">Excel (KPIs, Pivot Tables)</div>
-      <div class="skill">Power BI (Dashboards)</div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-
-      <div class="project">
-        <h3>Sales Performance Analytics</h3>
-        <p>Identified revenue trends and underperforming regions using SQL and Python.</p>
-        <a href="#">GitHub</a> | <a href="#">Dashboard</a>
-      </div>
-
-      <div class="project">
-        <h3>Customer Churn Analysis</h3>
-        <p>Analyzed churn drivers and recommended retention strategies.</p>
-        <a href="#">GitHub</a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/rahul-07t077777" target="_blank">LinkedIn</a>
-    <a href="mailto:Rahulelhan@email.com">Email</a>
-  </section>
-
-  <footer>
-    © 2025 Rahul • Data Analyst
-  </footer>
-
-</body>
-</html>
+/* CARDS */
+.card {
+  background: var(--glass);
+  backdrop-filter: var(--blur);
+  border-radius: 18px
