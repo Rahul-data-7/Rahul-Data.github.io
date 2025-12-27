@@ -96,3 +96,133 @@
       font-weight: 500;
     }
 
+    /* PROJECTS */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+    }
+
+    .project-card p {
+      font-size: 0.95rem;
+      color: #374151;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      color: #6b7280;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+      <!-- Upload your photo as photo.jpg -->
+      <img src="photo.jpg" alt="Rahul Photo">
+
+      <div>
+        <h1>Rahul [Last Name]</h1>
+        <p>Data Analyst | SQL • Python • Power BI<br>MS in Business Analytics</p>
+
+        <div class="social">
+          <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+          <a href="resume.pdf" target="_blank">Resume</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section>
+      <h2>About Me</h2>
+      <p>
+        Data Analyst with a Master’s degree in Business Analytics, experienced in converting raw data
+        into actionable insights. Strong hands-on experience with SQL, Python, Excel, and Power BI.
+        Actively seeking full-time Data Analyst opportunities.
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill-box">SQL (Joins, Window Functions)</div>
+        <div class="skill-box">Python (Pandas, NumPy, EDA)</div>
+        <div class="skill-box">Excel (Pivot Tables, KPIs)</div>
+        <div class="skill-box">Power BI (Dashboards)</div>
+        <div class="skill-box">Statistics</div>
+        <div class="skill-box">Business Analysis</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+      <h2>Projects</h2>
+      <div class="projects">
+
+        <div class="project-card">
+          <h3>Sales Performance Analytics</h3>
+          <p>
+            Analyzed sales data to identify revenue trends and underperforming regions.
+            Built an interactive Power BI dashboard to support business decisions.
+          </p>
+          <p><strong>Tools:</strong> SQL, Python, Power BI</p>
+          <a href="#">GitHub Repo</a> | <a href="#">Dashboard</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Customer Churn Analysis</h3>
+          <p>
+            Conducted exploratory data analysis to identify key factors influencing customer churn
+            and provided retention recommendations.
+          </p>
+          <p><strong>Tools:</strong> Python, Excel</p>
+          <a href="#">GitHub Repo</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section>
+      <h2>Contact</h2>
+      <p>
+        Email: your@email.com <br>
+        LinkedIn: linkedin.com/in/yourprofile
+      </p>
+    </section>
+
+    <footer>
+      © 2025 Rahul • Data Analyst
+    </footer>
+
+  </div>
+
+</body>
+</html>
