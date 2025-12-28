@@ -1,28 +1,28 @@
-// Navbar scroll effect
-const navbar = document.querySelector('.navbar');
+// Navbar scroll effect (darker on scroll)
+const navbar = document.getElementById("navbar");
 
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
   if (window.scrollY > 50) {
-    navbar.style.background = 'rgba(0, 0, 0, 0.6)';
-    navbar.style.backdropFilter = 'blur(15px)';
+    navbar.style.background = "rgba(0, 0, 0, 0.6)";
+    navbar.style.backdropFilter = "blur(16px)";
   } else {
-    navbar.style.background = 'rgba(0, 0, 0, 0.3)';
-    navbar.style.backdropFilter = 'blur(10px)';
+    navbar.style.background = "rgba(0, 0, 0, 0.15)";
+    navbar.style.backdropFilter = "blur(10px)";
   }
 });
 
 // Scroll reveal
-const reveals = document.querySelectorAll('.reveal');
+const reveals = document.querySelectorAll(".reveal");
 
 function revealOnScroll() {
-  reveals.forEach(section => {
+  reveals.forEach((section) => {
     const windowHeight = window.innerHeight;
     const revealTop = section.getBoundingClientRect().top;
-    if (revealTop < windowHeight - 100) {
-      section.classList.add('active');
+    if (revealTop < windowHeight - 120) {
+      section.classList.add("active");
     }
   });
 }
 
-window.addEventListener('scroll', revealOnScroll);
+window.addEventListener("scroll", revealOnScroll);
 revealOnScroll();
