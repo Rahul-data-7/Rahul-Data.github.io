@@ -645,3 +645,23 @@ h2{
   .nav-links.open{ display:flex; }
   .nav-links a{ width:100%; }
 }
+/* NEW: Hero highlight chips under name */
+.hero-mini{
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.mini-chip{
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  font-weight: 800;
+  font-size: 0.9rem;
+  opacity: 0.95;
+}
