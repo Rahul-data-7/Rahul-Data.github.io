@@ -5,139 +5,199 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rahul Tellapuram | Data Analyst</title>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
+<body>
   <!-- NAVBAR -->
   <header class="navbar" id="navbar">
-    <div class="logo">Rahul.</div>
-    <nav class="nav-links">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+    <div class="logo">Rahul<span class="dot">.</span></div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#about">About</a>
+      <a href="experience.html">Experience</a>
+      <a href="education.html">Education</a>
+      <a href="skills.html">Skills</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>Hi, I'm <span>Rahul</span></h1>
-      <h2>Data Analyst & Business Analytics Professional</h2>
-      <p>I transform data into insights using Python, SQL, Power BI, and Tableau.</p>
+    <div class="hero-inner">
+      <div class="hero-card glass">
+        <div class="hero-badge">Open to Data Analyst / BI Analyst roles</div>
 
-      <div class="hero-stats">
-        <div class="stat-pill"><strong>Python</strong><span>Analytics</span></div>
-        <div class="stat-pill"><strong>SQL</strong><span>Data Modeling</span></div>
-        <div class="stat-pill"><strong>Power BI</strong><span>Dashboards</span></div>
-      </div>
+        <h1>Hi, I’m <span class="grad-text">Rahul</span></h1>
+        <h2>Data Analyst & Business Analytics Professional</h2>
+        <p class="muted">
+          I turn data into decisions using Python, SQL, Power BI, Tableau, and Excel — with a focus on clean analysis and clear dashboards.
+        </p>
 
-      <div class="hero-buttons">
-        <a href="#projects" class="btn primary">View Projects</a>
-        <a href="#contact" class="btn secondary">Contact Me</a>
-      </div>
+        <div class="hero-stats">
+          <div class="stat-pill">
+            <strong>Python</strong><span>Analytics</span>
+          </div>
+          <div class="stat-pill">
+            <strong>SQL</strong><span>Data Modeling</span>
+          </div>
+          <div class="stat-pill">
+            <strong>Power BI</strong><span>Dashboards</span>
+          </div>
+        </div>
 
-      <div class="scroll-indicator">
-        <i class="fas fa-angle-down"></i>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn primary">View Projects</a>
+          <a href="#contact" class="btn secondary">Contact Me</a>
+        </div>
+
+        <!-- Glass chips -->
+        <div class="hero-skill-grid">
+          <div class="chip">Python</div>
+          <div class="chip">Analytics</div>
+          <div class="chip">SQL</div>
+          <div class="chip">Data Modeling</div>
+          <div class="chip">Data Cleaning</div>
+          <div class="chip">Power BI</div>
+          <div class="chip">Dashboards</div>
+          <div class="chip">Tableau</div>
+          <div class="chip">R Studio</div>
+          <div class="chip">Excel</div>
+        </div>
+
+        <div class="scroll-indicator">
+          <i class="fas fa-angle-down"></i>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="about reveal">
-    <h2>About Me</h2>
-    <p>
-      I am a Data Analyst and Business Analytics graduate student at the University at Buffalo
-      with hands-on experience in Python automation, SQL analytics, and interactive dashboards.
-    </p>
+  <section id="about" class="section reveal">
+    <div class="container">
+      <h2>About Me</h2>
+      <p class="section-lead">
+        MS in Management Science & Business Analytics (University at Buffalo). I build dashboards and analysis that help teams track KPIs, spot trends, and act fast.
+      </p>
 
-    <div class="about-cards">
-      <div class="card">
-        <h3>Education</h3>
-        <p>MS in Management Science & Business Analytics<br>University at Buffalo</p>
+      <div class="grid-3">
+        <div class="card glass">
+          <h3>Strengths</h3>
+          <p class="muted">Data cleaning, SQL analysis, KPI reporting, and storytelling with dashboards.</p>
+        </div>
+
+        <div class="card glass">
+          <h3>Tools</h3>
+          <p class="muted">Python, SQL, Power BI, Tableau, Excel, Git, Statistics.</p>
+        </div>
+
+        <div class="card glass">
+          <h3>Focus</h3>
+          <p class="muted">Business impact, clean workflows, and clear insights that drive decisions.</p>
+        </div>
       </div>
-      <div class="card">
-        <h3>Focus Areas</h3>
-        <p>Data Analysis, Automation, Visualization, Business Insights</p>
-      </div>
-      <div class="card">
-        <h3>Tools</h3>
-        <p>Python, SQL, Power BI, Tableau, Excel</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="skills reveal">
-    <h2>Skills</h2>
-
-    <div class="skill">
-      <span>Python</span>
-      <div class="bar"><div class="fill" style="width: 85%"></div></div>
-    </div>
-
-    <div class="skill">
-      <span>SQL</span>
-      <div class="bar"><div class="fill" style="width: 80%"></div></div>
-    </div>
-
-    <div class="skill">
-      <span>Power BI</span>
-      <div class="bar"><div class="fill" style="width: 85%"></div></div>
-    </div>
-
-    <div class="skill">
-      <span>Excel</span>
-      <div class="bar"><div class="fill" style="width: 90%"></div></div>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="projects reveal">
-    <h2>Projects</h2>
+  <section id="projects" class="section reveal">
+    <div class="container">
+      <h2>Projects</h2>
+      <p class="section-lead">A few projects that show analysis + dashboards + business impact.</p>
 
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>Retail Sales Analytics</h3>
-        <p>End-to-end sales analysis using Python, SQL, and Power BI.</p>
-        <span class="tag inprogress">In Progress</span>
+      <div class="project-grid">
+        <div class="project-card glass">
+          <div class="project-top">
+            <h3>Retail Sales Analytics</h3>
+            <span class="pill pill-live">In Progress</span>
+          </div>
+          <p class="muted">Sales trends, top products, seasonality, and KPI dashboard with Python + SQL + Power BI.</p>
+          <div class="project-meta">
+            <span class="meta-chip">Python</span>
+            <span class="meta-chip">SQL</span>
+            <span class="meta-chip">Power BI</span>
+          </div>
+        </div>
+
+        <div class="project-card glass">
+          <div class="project-top">
+            <h3>Financial KPI Dashboard</h3>
+            <span class="pill pill-plan">Planned</span>
+          </div>
+          <p class="muted">Variance analysis and KPI reporting dashboard for business performance.</p>
+          <div class="project-meta">
+            <span class="meta-chip">Excel</span>
+            <span class="meta-chip">Power BI</span>
+            <span class="meta-chip">SQL</span>
+          </div>
+        </div>
+
+        <div class="project-card glass">
+          <div class="project-top">
+            <h3>Automated Reporting Pipeline</h3>
+            <span class="pill pill-plan">Planned</span>
+          </div>
+          <p class="muted">Python automation for recurring reports: clean data, export, and schedule-ready output.</p>
+          <div class="project-meta">
+            <span class="meta-chip">Python</span>
+            <span class="meta-chip">Automation</span>
+            <span class="meta-chip">Excel</span>
+          </div>
+        </div>
       </div>
 
-      <div class="project-card">
-        <h3>Financial KPI Dashboard</h3>
-        <p>Variance analysis and financial performance reporting.</p>
-        <span class="tag planned">Planned</span>
-      </div>
-
-      <div class="project-card">
-        <h3>Automated Reporting Pipeline</h3>
-        <p>Python automation for recurring business reports.</p>
-        <span class="tag planned">Planned</span>
+      <div class="note glass">
+        Want the detailed breakdown? Visit the <a href="skills.html">Skills</a> page to see proficiency + where each tool was used.
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="contact reveal">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:rahulelhan@gmail.com">rahulelhan@gmail.com</a></p>
+  <section id="contact" class="section reveal">
+    <div class="container">
+      <h2>Contact</h2>
+      <p class="section-lead">Let’s connect — I reply fast.</p>
 
-    <div class="socials">
-      <a href="https://github.com/Rahul-data-7" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/rahul-07t077777" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <div class="contact-grid">
+        <div class="card glass">
+          <h3>Email</h3>
+          <p><a class="link" href="mailto:rahulelhan@gmail.com">rahulelhan@gmail.com</a></p>
+        </div>
+
+        <div class="card glass">
+          <h3>Location</h3>
+          <p class="muted">United States (Open to relocation/remote)</p>
+        </div>
+      </div>
+
+      <div class="socials">
+        <a href="https://github.com/Rahul-data-7" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/rahul-07t077777" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>Built with ❤️ by Rahul Tellapuram</p>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="logo small">Rahul<span class="dot">.</span></div>
+        <p class="muted">Built with ❤️ and clean code.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="experience.html">Experience</a>
+        <a href="education.html">Education</a>
+        <a href="skills.html">Skills</a>
+        <a href="index.html#projects">Projects</a>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
