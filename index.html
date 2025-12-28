@@ -11,15 +11,14 @@
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
-  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- NAVBAR -->
-  <header class="navbar">
+  <header class="navbar" id="navbar">
     <div class="logo">Rahul.</div>
-    <nav>
+    <nav class="nav-links">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
@@ -32,14 +31,12 @@
     <div class="hero-content">
       <h1>Hi, I'm <span>Rahul</span></h1>
       <h2>Data Analyst & Business Analytics Professional</h2>
-      <p>
-        I transform data into insights using Python, SQL, Power BI, and Tableau.
-      </p>
+      <p>I transform data into insights using Python, SQL, Power BI, and Tableau.</p>
 
       <div class="hero-stats">
-        <div><strong>Python</strong><span>Analytics</span></div>
-        <div><strong>SQL</strong><span>Data Modeling</span></div>
-        <div><strong>Power BI</strong><span>Dashboards</span></div>
+        <div class="stat-pill"><strong>Python</strong><span>Analytics</span></div>
+        <div class="stat-pill"><strong>SQL</strong><span>Data Modeling</span></div>
+        <div class="stat-pill"><strong>Power BI</strong><span>Dashboards</span></div>
       </div>
 
       <div class="hero-buttons">
@@ -83,22 +80,22 @@
 
     <div class="skill">
       <span>Python</span>
-      <div class="bar"><div style="width: 85%"></div></div>
+      <div class="bar"><div class="fill" style="width: 85%"></div></div>
     </div>
 
     <div class="skill">
       <span>SQL</span>
-      <div class="bar"><div style="width: 80%"></div></div>
+      <div class="bar"><div class="fill" style="width: 80%"></div></div>
     </div>
 
     <div class="skill">
       <span>Power BI</span>
-      <div class="bar"><div style="width: 85%"></div></div>
+      <div class="bar"><div class="fill" style="width: 85%"></div></div>
     </div>
 
     <div class="skill">
       <span>Excel</span>
-      <div class="bar"><div style="width: 90%"></div></div>
+      <div class="bar"><div class="fill" style="width: 90%"></div></div>
     </div>
   </section>
 
@@ -110,19 +107,19 @@
       <div class="project-card">
         <h3>Retail Sales Analytics</h3>
         <p>End-to-end sales analysis using Python, SQL, and Power BI.</p>
-        <span class="tag">In Progress</span>
+        <span class="tag inprogress">In Progress</span>
       </div>
 
       <div class="project-card">
         <h3>Financial KPI Dashboard</h3>
         <p>Variance analysis and financial performance reporting.</p>
-        <span class="tag">Planned</span>
+        <span class="tag planned">Planned</span>
       </div>
 
       <div class="project-card">
         <h3>Automated Reporting Pipeline</h3>
         <p>Python automation for recurring business reports.</p>
-        <span class="tag">Planned</span>
+        <span class="tag planned">Planned</span>
       </div>
     </div>
   </section>
@@ -133,8 +130,8 @@
     <p>Email: <a href="mailto:rahulelhan@gmail.com">rahulelhan@gmail.com</a></p>
 
     <div class="socials">
-      <a href="https://github.com/Rahul-data-7" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/rahul-07t077777" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Rahul-data-7" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/rahul-07t077777" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
     </div>
   </section>
 
