@@ -1,128 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Rahul | Data Analyst</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rahul Tellapuram | Data Analyst</title>
 
-<!-- Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<style>
-:root {
-  --primary: #2563eb;
-  --glass: rgba(255,255,255,0.15);
-  --blur: blur(12px);
-  --bg: #0f172a;
-  --text: #e5e7eb;
-}
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-body {
-  background: linear-gradient(135deg, #0f172a, #020617);
-  color: var(--text);
-  scroll-behavior: smooth;
-}
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">Rahul.</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-/* NAVBAR */
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  padding: 18px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--glass);
-  backdrop-filter: var(--blur);
-  z-index: 999;
-}
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm <span>Rahul</span></h1>
+      <h2>Data Analyst & Business Analytics Professional</h2>
+      <p>
+        I transform data into insights using Python, SQL, Power BI, and Tableau.
+      </p>
 
-header h1 {
-  color: white;
-}
+      <div class="hero-stats">
+        <div><strong>Python</strong><span>Analytics</span></div>
+        <div><strong>SQL</strong><span>Data Modeling</span></div>
+        <div><strong>Power BI</strong><span>Dashboards</span></div>
+      </div>
 
-nav a {
-  color: #cbd5f5;
-  margin-left: 25px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
-}
+      <div class="scroll-indicator">
+        <i class="fas fa-angle-down"></i>
+      </div>
+    </div>
+  </section>
 
-nav a:hover {
-  color: var(--primary);
-}
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I am a Data Analyst and Business Analytics graduate student at the University at Buffalo
+      with hands-on experience in Python automation, SQL analytics, and interactive dashboards.
+    </p>
 
-/* SECTIONS */
-section {
-  padding: 120px 80px;
-}
+    <div class="about-cards">
+      <div class="card">
+        <h3>Education</h3>
+        <p>MS in Management Science & Business Analytics<br>University at Buffalo</p>
+      </div>
+      <div class="card">
+        <h3>Focus Areas</h3>
+        <p>Data Analysis, Automation, Visualization, Business Insights</p>
+      </div>
+      <div class="card">
+        <h3>Tools</h3>
+        <p>Python, SQL, Power BI, Tableau, Excel</p>
+      </div>
+    </div>
+  </section>
 
-/* HERO */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  gap: 60px;
-}
+  <!-- SKILLS -->
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
 
-.avatar {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  border: 5px solid transparent;
-  background:
-    linear-gradient(#020617, #020617) padding-box,
-    linear-gradient(135deg, #2563eb, #38bdf8) border-box;
-}
+    <div class="skill">
+      <span>Python</span>
+      <div class="bar"><div style="width: 85%"></div></div>
+    </div>
 
-.hero h2 {
-  font-size: 52px;
-}
+    <div class="skill">
+      <span>SQL</span>
+      <div class="bar"><div style="width: 80%"></div></div>
+    </div>
 
-.hero p {
-  color: #94a3b8;
-  margin: 15px 0 30px;
-  font-size: 18px;
-}
+    <div class="skill">
+      <span>Power BI</span>
+      <div class="bar"><div style="width: 85%"></div></div>
+    </div>
 
-.btn {
-  padding: 14px 32px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-right: 15px;
-  transition: 0.3s;
-}
+    <div class="skill">
+      <span>Excel</span>
+      <div class="bar"><div style="width: 90%"></div></div>
+    </div>
+  </section>
 
-.primary {
-  background: var(--primary);
-  color: white;
-}
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
 
-.primary:hover {
-  transform: scale(1.05);
-}
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Retail Sales Analytics</h3>
+        <p>End-to-end sales analysis using Python, SQL, and Power BI.</p>
+        <span class="tag">In Progress</span>
+      </div>
 
-.outline {
-  border: 2px solid var(--primary);
-  color: var(--primary);
-}
+      <div class="project-card">
+        <h3>Financial KPI Dashboard</h3>
+        <p>Variance analysis and financial performance reporting.</p>
+        <span class="tag">Planned</span>
+      </div>
 
-.outline:hover {
-  background: var(--primary);
-  color: white;
-}
+      <div class="project-card">
+        <h3>Automated Reporting Pipeline</h3>
+        <p>Python automation for recurring business reports.</p>
+        <span class="tag">Planned</span>
+      </div>
+    </div>
+  </section>
 
-/* CARDS */
-.card {
-  background: var(--glass);
-  backdrop-filter: var(--blur);
-  border-radius: 18px
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+
+    <p>Email: <a href="mailto:rahulelhan@gmail.com">rahulelhan@gmail.com</a></p>
+
+    <div class="socials">
+      <a href="https://github.com/Rahul-data-7" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/rahul-07t077777" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Built with ❤️ by Rahul Tellapuram</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
