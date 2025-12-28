@@ -1,3 +1,4 @@
+// Navbar scroll effect
 const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
@@ -9,3 +10,19 @@ window.addEventListener('scroll', () => {
     navbar.style.backdropFilter = 'blur(10px)';
   }
 });
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+
+function revealOnScroll() {
+  reveals.forEach(section => {
+    const windowHeight = window.innerHeight;
+    const revealTop = section.getBoundingClientRect().top;
+    if (revealTop < windowHeight - 100) {
+      section.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
