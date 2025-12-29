@@ -28,20 +28,15 @@
     });
   }
 
-  // Form submission (works if you set Formspree; otherwise fallback still lets user email you)
+  // Contact form submit (Formspree)
   const form = document.getElementById("contactForm");
   const statusEl = document.getElementById("formStatus");
   const btn = document.getElementById("submitBtn");
 
   if (form && statusEl && btn) {
     form.addEventListener("submit", async (e) => {
-      const action = form.getAttribute("action") || "";
-      const isFormspree = action.includes("formspree.io");
-
-      // If not using Formspree, just let the browser do normal submit (or you can remove this)
-      if (!isFormspree) return;
-
       e.preventDefault();
+
       statusEl.textContent = "";
       statusEl.className = "form-status";
       btn.disabled = true;
@@ -49,7 +44,7 @@
 
       try {
         const formData = new FormData(form);
-        const response = await fetch(action, {
+        const response = await fetch(form.action, {
           method: "POST",
           body: formData,
           headers: { "Accept": "application/json" }
