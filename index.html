@@ -1,313 +1,617 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rahul | Data Analyst</title>
+  <title>Rahul Tellapuram | Data Analyst</title>
+  <meta name="description" content="Data Analyst skilled in Python, SQL, Power BI, Tableau — dashboards, automation, and data storytelling." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <!-- ====== NAVBAR ====== -->
+  <header class="nav-wrap">
+    <nav class="nav" id="navbar">
+      <a class="brand" href="index.html#home">
+        <span class="brand-dot"></span>
+        <span>Rahul</span>
+      </a>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="nav-inner">
-      <a class="brand" href="index.html">Rahul<span class="dot">.</span></a>
-
-      <!-- Desktop links -->
-      <nav class="nav-links" aria-label="Primary">
-        <a href="index.html" class="active">Home</a>
-        <a href="experience.html">Experience</a>
-        <a href="education.html">Education</a>
-        <a href="skills.html">Skills</a>
-        <a href="certifications.html">Certifications</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <!-- Mobile hamburger -->
-      <button class="hamburger" id="openMenu" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-    </div>
 
-    <!-- Mobile overlay menu -->
-    <div class="mobile-overlay" id="mobileMenu" aria-hidden="true">
-      <div class="mobile-top">
-        <div class="mobile-brand">Rahul<span class="dot">.</span></div>
-        <button class="close" id="closeMenu" aria-label="Close menu">✕</button>
-      </div>
-
-      <nav class="mobile-links" aria-label="Mobile">
-        <a href="index.html">Home</a>
+      <div class="nav-links" id="navLinks">
         <a href="experience.html">Experience</a>
         <a href="education.html">Education</a>
         <a href="skills.html">Skills</a>
         <a href="certifications.html">Certifications</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="mobile-actions">
-        <a class="btn primary" href="#projects">View Projects</a>
-        <a class="btn outline" href="#contact">Contact Me</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact" class="btn btn-sm">Contact</a>
       </div>
-    </div>
+    </nav>
   </header>
 
-  <!-- HERO (SPLIT) -->
-  <main>
-    <section class="hero">
-      <div class="hero-inner hero-split">
-
-        <!-- LEFT CONTENT -->
-        <div class="hero-left">
-          <div class="badge">Open to Data Analyst / BI Analyst roles</div>
-
-          <h2 class="intro">
-            Hi, I’m <span class="grad">Rahul</span>
-          </h2>
-
-          <h3 class="role">
-            Professional Data Analyst
-          </h3>
-
-          <h1 class="headline left">
-            End-to-End Data Analysis <span class="sep">|</span><br/>
-            Empowering Data-Driven Strategy through
-            <span class="grad">Automation</span> & Precision
-            <span class="grad">BI</span>
-          </h1>
-
-          <p class="subheadline left">
-            I build reliable reporting systems and executive-ready dashboards — from clean
-            data models to high-impact visual storytelling.
-          </p>
-
-          <div class="cta-row left">
-            <a class="btn primary" href="#projects">View Projects</a>
-            <a class="btn outline" href="#contact">Contact Me</a>
-          </div>
+  <!-- ====== HERO ====== -->
+  <main id="home" class="section hero">
+    <div class="container hero-grid">
+      <div class="hero-left reveal">
+        <div class="pill">
+          <span class="pulse"></span>
+          Open to Data Analyst / Analytics roles (OPT)
         </div>
 
-        <!-- RIGHT CONTENT -->
-        <div class="hero-right">
-          <div class="process-grid">
-            <div class="process-card">
-              <div class="p-icon">🧹</div>
-              <div class="p-title">Data Wrangling</div>
-              <div class="p-sub">Single source of truth</div>
-            </div>
+        <h1>
+          Hi, I’m <span class="grad">Rahul Tellapuram</span><br />
+          <span class="muted">Data Analyst</span>
+        </h1>
 
-            <div class="process-card">
-              <div class="p-icon">📈</div>
-              <div class="p-title">Advanced Analytics</div>
-              <div class="p-sub">Growth & efficiency drivers</div>
-            </div>
-
-            <div class="process-card">
-              <div class="p-icon">📊</div>
-              <div class="p-title">BI Development</div>
-              <div class="p-sub">Executive-ready views</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- PROJECTS (UPGRADED) -->
-    <section id="projects" class="section">
-      <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <p class="section-lead">
-          5 portfolio-ready projects — each built to show impact, clean analysis, and executive communication.
+        <p class="lead">
+          I build reliable reporting systems and executive-ready dashboards — from clean data models to high-impact visual storytelling.
+          Strong in Python, SQL, Power BI, Tableau, and automation.
         </p>
 
-        <!-- Filters -->
-        <div class="filters" role="tablist" aria-label="Project Filters">
-          <button class="filter-btn active" data-filter="all" type="button">All</button>
-          <button class="filter-btn" data-filter="bi" type="button">BI</button>
-          <button class="filter-btn" data-filter="sql" type="button">SQL</button>
-          <button class="filter-btn" data-filter="python" type="button">Python</button>
+        <div class="hero-cta">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn btn-ghost" href="#contact">Let’s Talk</a>
         </div>
 
-        <div class="projects-grid">
+        <div class="stats">
+          <div class="stat glass">
+            <div class="stat-num">30%</div>
+            <div class="stat-label">Reporting accuracy improvement</div>
+          </div>
+          <div class="stat glass">
+            <div class="stat-num">22%</div>
+            <div class="stat-label">Engagement lift (creator analytics)</div>
+          </div>
+          <div class="stat glass">
+            <div class="stat-num">40%</div>
+            <div class="stat-label">Inventory tracking improvement</div>
+          </div>
+        </div>
 
-          <!-- 1 -->
-          <article class="project-card glass-card" data-tags="bi sql">
-            <div class="project-top">
-              <h3>Executive KPI Dashboard (Power BI)</h3>
-              <span class="pill">BI</span>
+        <div class="hero-links">
+          <a class="chip-link" target="_blank" rel="noreferrer" href="https://github.com/Rahul-data-7">GitHub</a>
+          <a class="chip-link" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/rahul-07t077777/">LinkedIn</a>
+          <a class="chip-link" href="mailto:rahulelhan@gmail.com">Email</a>
+        </div>
+      </div>
+
+      <div class="hero-right reveal">
+        <div class="portrait-card">
+          <div class="gradient-frame">
+            <img src="assets/profile.png" alt="Rahul profile photo" class="portrait" />
+          </div>
+
+          <div class="hero-mini glass">
+            <div class="mini-row">
+              <span class="mini-k">Location</span>
+              <span class="mini-v">New York, USA</span>
+            </div>
+            <div class="mini-row">
+              <span class="mini-k">Email</span>
+              <a class="mini-v link" href="mailto:rahulelhan@gmail.com">rahulelhan@gmail.com</a>
+            </div>
+            <div class="mini-row">
+              <span class="mini-k">GitHub</span>
+              <a class="mini-v link" target="_blank" rel="noreferrer" href="https://github.com/Rahul-data-7">Rahul-data-7</a>
+            </div>
+            <div class="mini-row">
+              <span class="mini-k">LinkedIn</span>
+              <a class="mini-v link" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/rahul-07t077777/">rahul-07t077777</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class="scroll-indicator" href="#about" aria-label="Scroll down">
+      <span class="mouse"></span>
+      <span class="scroll-text">Scroll</span>
+    </a>
+  </main>
+
+  <!-- ====== ABOUT ====== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>About</h2>
+        <p class="muted">
+          Analytical and creative Data Analyst with hands-on experience in automation, BI reporting, ETL, and cross-platform analytics.
+          I focus on clean data → trusted metrics → dashboards that drive decisions.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card glass reveal">
+          <h3>What I do</h3>
+          <p>
+            I transform raw data into clear insights using Python/SQL and build dashboards in Power BI/Tableau.
+            I also automate reporting workflows to reduce manual effort and improve accuracy.
+          </p>
+
+          <div class="badge-wrap">
+            <span class="badge">Python</span>
+            <span class="badge">SQL</span>
+            <span class="badge">Power BI</span>
+            <span class="badge">Tableau</span>
+            <span class="badge">Pandas</span>
+            <span class="badge">Excel (VBA)</span>
+            <span class="badge">Google Analytics</span>
+          </div>
+        </div>
+
+        <div class="about-right">
+          <div class="info-cards">
+            <div class="info glass reveal">
+              <div class="info-top">
+                <span class="info-ico">📊</span>
+                <span class="info-title">Dashboards</span>
+              </div>
+              <p class="muted">Executive-ready KPIs with drilldowns and trends.</p>
             </div>
 
-            <p class="muted">
-              Built an executive-ready KPI dashboard with drilldowns, trend views, and performance variance.
-            </p>
-
-            <div class="metrics">
-              <div class="metric"><span class="metric-num">12+</span><span class="metric-label">KPIs</span></div>
-              <div class="metric"><span class="metric-num">3</span><span class="metric-label">Views</span></div>
-              <div class="metric"><span class="metric-num">Weekly</span><span class="metric-label">Reporting</span></div>
+            <div class="info glass reveal">
+              <div class="info-top">
+                <span class="info-ico">⚙️</span>
+                <span class="info-title">Automation</span>
+              </div>
+              <p class="muted">Python + Excel workflows to cut manual reporting time.</p>
             </div>
 
-            <div class="tags">
-              <span class="tag">Power BI</span>
-              <span class="tag">DAX</span>
-              <span class="tag">SQL</span>
-              <span class="tag">KPI Design</span>
-            </div>
-          </article>
-
-          <!-- 2 -->
-          <article class="project-card glass-card" data-tags="sql">
-            <div class="project-top">
-              <h3>SQL Business Insights (PostgreSQL)</h3>
-              <span class="pill">SQL</span>
+            <div class="info glass reveal">
+              <div class="info-top">
+                <span class="info-ico">🧩</span>
+                <span class="info-title">ETL & Modeling</span>
+              </div>
+              <p class="muted">Clean transforms, joins, and reusable datasets.</p>
             </div>
 
-            <p class="muted">
-              Designed analytical queries for cohort trends, retention, and revenue breakdowns using joins and window functions.
-            </p>
-
-            <div class="metrics">
-              <div class="metric"><span class="metric-num">25+</span><span class="metric-label">Queries</span></div>
-              <div class="metric"><span class="metric-num">6</span><span class="metric-label">Reports</span></div>
-              <div class="metric"><span class="metric-num">1</span><span class="metric-label">Data Model</span></div>
+            <div class="info glass reveal">
+              <div class="info-top">
+                <span class="info-ico">🎯</span>
+                <span class="info-title">Storytelling</span>
+              </div>
+              <p class="muted">Insights that connect analysis to outcomes.</p>
             </div>
+          </div>
 
-            <div class="tags">
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">Window Functions</span>
-              <span class="tag">CTEs</span>
-              <span class="tag">Data Modeling</span>
+          <div class="client-stats glass reveal">
+            <div class="cs-item">
+              <div class="cs-num">3.75</div>
+              <div class="cs-label">MS GPA (UB)</div>
             </div>
-          </article>
-
-          <!-- 3 -->
-          <article class="project-card glass-card" data-tags="python">
-            <div class="project-top">
-              <h3>Automated Data Cleaning Pipeline (Python)</h3>
-              <span class="pill">Python</span>
+            <div class="cs-item">
+              <div class="cs-num">10+</div>
+              <div class="cs-label">Creators analyzed</div>
             </div>
-
-            <p class="muted">
-              Built a reusable pipeline for cleaning datasets, handling missing values, and generating summary QA reports.
-            </p>
-
-            <div class="metrics">
-              <div class="metric"><span class="metric-num">30%</span><span class="metric-label">Time Saved</span></div>
-              <div class="metric"><span class="metric-num">10+</span><span class="metric-label">Checks</span></div>
-              <div class="metric"><span class="metric-num">1</span><span class="metric-label">Template</span></div>
+            <div class="cs-item">
+              <div class="cs-num">Fast</div>
+              <div class="cs-label">Dashboards & automation delivery</div>
             </div>
-
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">Pandas</span>
-              <span class="tag">EDA</span>
-              <span class="tag">Data Quality</span>
-            </div>
-          </article>
-
-          <!-- 4 -->
-          <article class="project-card glass-card" data-tags="bi python">
-            <div class="project-top">
-              <h3>Sales Forecast & Trend Analysis</h3>
-              <span class="pill">Analytics</span>
-            </div>
-
-            <p class="muted">
-              Forecasted sales trends and identified high-impact growth drivers using statistical modeling and visual storytelling.
-            </p>
-
-            <div class="metrics">
-              <div class="metric"><span class="metric-num">5+</span><span class="metric-label">Drivers</span></div>
-              <div class="metric"><span class="metric-num">2</span><span class="metric-label">Models</span></div>
-              <div class="metric"><span class="metric-num">Weekly</span><span class="metric-label">Insights</span></div>
-            </div>
-
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">Stats</span>
-              <span class="tag">Power BI</span>
-              <span class="tag">Forecasting</span>
-            </div>
-          </article>
-
-          <!-- 5 -->
-          <article class="project-card glass-card" data-tags="bi sql">
-            <div class="project-top">
-              <h3>Customer Segmentation Dashboard</h3>
-              <span class="pill">BI</span>
-            </div>
-
-            <p class="muted">
-              Created segmentation KPIs and dashboard views to compare cohorts, engagement, and profitability.
-            </p>
-
-            <div class="metrics">
-              <div class="metric"><span class="metric-num">4</span><span class="metric-label">Segments</span></div>
-              <div class="metric"><span class="metric-num">8+</span><span class="metric-label">KPIs</span></div>
-              <div class="metric"><span class="metric-num">2</span><span class="metric-label">Dashboards</span></div>
-            </div>
-
-            <div class="tags">
-              <span class="tag">SQL</span>
-              <span class="tag">Power BI</span>
-              <span class="tag">Cohorts</span>
-              <span class="tag">Storytelling</span>
-            </div>
-          </article>
+          </div>
 
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="glass-card pad-lg">
-          <h2 class="section-title">Contact</h2>
-          <p class="section-lead">Fastest way: email or LinkedIn.</p>
+  <!-- ====== PROJECTS ====== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Projects</h2>
+        <p class="muted">
+          Recruiter-friendly: each project includes the problem, approach, tools, and a GitHub repo link.
+        </p>
+      </div>
 
-          <div class="contact-icons">
-            <a class="icon-card" href="mailto:rahulelhan@gmail.com" aria-label="Email">📧<span>Email</span></a>
-            <a class="icon-card" href="https://www.linkedin.com/in/rahul-07t077777/" target="_blank" rel="noopener" aria-label="LinkedIn">💼<span>LinkedIn</span></a>
-            <a class="icon-card" href="https://github.com/Rahul-data-7" target="_blank" rel="noopener" aria-label="GitHub">🧑‍💻<span>GitHub</span></a>
-            <a class="icon-card" href="assets/Rahul_Tellapuram_Resume.pdf" target="_blank" rel="noopener" aria-label="Resume">📄<span>Resume</span></a>
-          </div>
+      <div class="filters reveal" role="tablist" aria-label="Project filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="bi">BI / Dashboards</button>
+        <button class="filter" data-filter="automation">Automation</button>
+        <button class="filter" data-filter="ml">ML / Analytics</button>
+      </div>
 
-          <hr class="sep-line" />
+      <div class="carousel reveal">
+        <button class="car-btn" id="prevBtn" aria-label="Previous project">‹</button>
 
-          <div class="form-wrap">
-            <h3 class="form-title">✉️ Send a Message</h3>
+        <div class="car-viewport">
+          <div class="car-track" id="projectTrack">
 
-            <form id="contactForm" action="https://formspree.io/f/xdaopnwq" method="POST">
-              <div class="form-row">
-                <input name="name" type="text" placeholder="Your Name" required />
-                <input name="email" type="email" placeholder="Your Email" required />
+            <!-- 1 -->
+            <article class="proj glass" data-tags="bi ml">
+              <div class="proj-top">
+                <h3>Cross-Platform Engagement Insights Dashboard</h3>
+                <span class="chip">BI + Python</span>
               </div>
 
-              <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-              <input type="hidden" name="source" value="Portfolio - GitHub Pages" />
+              <p class="muted">
+                <strong>Problem:</strong> creators lacked a consistent view of performance across platforms.<br/>
+                <strong>Approach:</strong> collected YouTube/Instagram data, cleaned with Pandas, built Power BI KPIs and drilldowns.<br/>
+                <strong>Result:</strong> improved posting decisions → average engagement increased by ~22%.
+              </p>
 
-              <button id="submitBtn" type="submit" class="btn primary">Send Message</button>
-              <div id="formStatus" class="form-status" aria-live="polite"></div>
-            </form>
+              <div class="metrics">
+                <div class="m"><span class="m-k">Data</span><span class="m-v">APIs / exports</span></div>
+                <div class="m"><span class="m-k">Tools</span><span class="m-v">Python, Power BI</span></div>
+                <div class="m"><span class="m-k">Outcome</span><span class="m-v">+22% lift</span></div>
+              </div>
+
+              <div class="proj-actions">
+                <a class="btn btn-sm" target="_blank" rel="noreferrer"
+                   href="https://github.com/Rahul-data-7/cross-platform-engagement-dashboard">View Repo</a>
+                <a class="btn btn-sm btn-ghost" href="#contact">Ask for Demo</a>
+              </div>
+            </article>
+
+            <!-- 2 -->
+            <article class="proj glass" data-tags="automation bi">
+              <div class="proj-top">
+                <h3>Financial Reconciliation Automation</h3>
+                <span class="chip">Automation</span>
+              </div>
+
+              <p class="muted">
+                <strong>Problem:</strong> reconciliation and validation were manual + error-prone.<br/>
+                <strong>Approach:</strong> Python + Excel/VBA pipeline for cleaning, matching, variance detection, and reporting outputs.<br/>
+                <strong>Result:</strong> improved reporting accuracy by ~30% and reduced repetitive work.
+              </p>
+
+              <div class="metrics">
+                <div class="m"><span class="m-k">Focus</span><span class="m-v">Reconciliation</span></div>
+                <div class="m"><span class="m-k">Tools</span><span class="m-v">Python, Excel VBA</span></div>
+                <div class="m"><span class="m-k">Impact</span><span class="m-v">+30% accuracy</span></div>
+              </div>
+
+              <div class="proj-actions">
+                <a class="btn btn-sm" target="_blank" rel="noreferrer"
+                   href="https://github.com/Rahul-data-7/financial-reconciliation-automation">View Repo</a>
+                <a class="btn btn-sm btn-ghost" href="#contact">Workflow Details</a>
+              </div>
+            </article>
+
+            <!-- 3 -->
+            <article class="proj glass" data-tags="bi">
+              <div class="proj-top">
+                <h3>Sales KPI Executive Dashboard</h3>
+                <span class="chip">Power BI / SQL</span>
+              </div>
+
+              <p class="muted">
+                <strong>Problem:</strong> KPI reporting lacked standard definitions and visibility.<br/>
+                <strong>Approach:</strong> built a KPI model (revenue, conversion, cohorts), created Power BI dashboards with drilldowns.<br/>
+                <strong>Result:</strong> faster weekly reporting and clearer performance tracking.
+              </p>
+
+              <div class="metrics">
+                <div class="m"><span class="m-k">KPI Set</span><span class="m-v">12+ metrics</span></div>
+                <div class="m"><span class="m-k">Tools</span><span class="m-v">SQL, Power BI</span></div>
+                <div class="m"><span class="m-k">Use</span><span class="m-v">Executive view</span></div>
+              </div>
+
+              <div class="proj-actions">
+                <a class="btn btn-sm" target="_blank" rel="noreferrer"
+                   href="https://github.com/Rahul-data-7/sales-kpi-dashboard">View Repo</a>
+                <a class="btn btn-sm btn-ghost" href="#contact">Request Report</a>
+              </div>
+            </article>
+
+            <!-- 4 -->
+            <article class="proj glass" data-tags="ml automation">
+              <div class="proj-top">
+                <h3>Customer Churn Prediction (End-to-End)</h3>
+                <span class="chip">ML</span>
+              </div>
+
+              <p class="muted">
+                <strong>Problem:</strong> identify high-risk customers early to reduce churn.<br/>
+                <strong>Approach:</strong> EDA → feature engineering → multiple models → evaluation → business recommendations.<br/>
+                <strong>Result:</strong> clear retention actions based on drivers of churn.
+              </p>
+
+              <div class="metrics">
+                <div class="m"><span class="m-k">Models</span><span class="m-v">3+</span></div>
+                <div class="m"><span class="m-k">Tools</span><span class="m-v">Python, ML</span></div>
+                <div class="m"><span class="m-k">Output</span><span class="m-v">Insights + actions</span></div>
+              </div>
+
+              <div class="proj-actions">
+                <a class="btn btn-sm" target="_blank" rel="noreferrer"
+                   href="https://github.com/Rahul-data-7/churn-prediction-end-to-end">View Repo</a>
+                <a class="btn btn-sm btn-ghost" href="#contact">Discuss Results</a>
+              </div>
+            </article>
+
+            <!-- 5 -->
+            <article class="proj glass" data-tags="bi automation">
+              <div class="proj-top">
+                <h3>Inventory & Donations Analytics (Volunteer)</h3>
+                <span class="chip">BI</span>
+              </div>
+
+              <p class="muted">
+                <strong>Problem:</strong> donation/inventory tracking lacked consistency and forecasting was difficult.<br/>
+                <strong>Approach:</strong> automated Excel tracking + Power BI dashboard for trends, inventory health, and weekly reporting.<br/>
+                <strong>Result:</strong> improved tracking by ~40% and reduced data entry errors.
+              </p>
+
+              <div class="metrics">
+                <div class="m"><span class="m-k">Impact</span><span class="m-v">+40%</span></div>
+                <div class="m"><span class="m-k">Tools</span><span class="m-v">Excel, Power BI</span></div>
+                <div class="m"><span class="m-k">Use</span><span class="m-v">Forecasting</span></div>
+              </div>
+
+              <div class="proj-actions">
+                <a class="btn btn-sm" target="_blank" rel="noreferrer"
+                   href="https://github.com/Rahul-data-7/inventory-donation-analytics">View Repo</a>
+                <a class="btn btn-sm btn-ghost" href="#contact">Request Access</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <button class="car-btn" id="nextBtn" aria-label="Next project">›</button>
+      </div>
+
+      <div class="dots reveal" id="dots" aria-label="Project navigation dots"></div>
+
+      <p class="tiny muted reveal">
+        If a repo link doesn’t exist yet, create the repo with the same name and push your code + README + screenshots.
+      </p>
+    </div>
+  </section>
+
+  <!-- ====== SERVICES ====== -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Services</h2>
+        <p class="muted">What I can deliver for analytics teams.</p>
+      </div>
+
+      <div class="bento">
+        <div class="bento-item glass glow reveal">
+          <h3>Dashboards & BI</h3>
+          <p class="muted">Power BI/Tableau dashboards, KPI definitions, drilldowns, refresh strategy.</p>
+        </div>
+
+        <div class="bento-item glass glow reveal">
+          <h3>SQL Analytics</h3>
+          <p class="muted">Joins, aggregations, cohort analysis, KPI pipelines, performance reporting.</p>
+        </div>
+
+        <div class="bento-item glass glow reveal">
+          <h3>Automation</h3>
+          <p class="muted">Python + Excel/VBA workflows that reduce manual reporting and errors.</p>
+        </div>
+
+        <div class="bento-item glass glow reveal">
+          <h3>ETL & Data Quality</h3>
+          <p class="muted">Cleaning, standardization, reusable datasets, validation checks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TESTIMONIALS ====== -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Testimonials</h2>
+        <p class="muted">Professional feedback.</p>
+      </div>
+
+      <div class="testimonials reveal">
+        <button class="car-btn" id="tPrev" aria-label="Previous testimonial">‹</button>
+
+        <div class="t-viewport glass">
+          <div class="t-track" id="tTrack">
+
+            <figure class="t-item">
+              <div class="t-head">
+                <img class="t-photo" src="assets/profile.png" alt="Testimonial photo" />
+                <div>
+                  <div class="t-name">Rebekah Leith</div>
+                  <div class="t-role muted">Manager</div>
+                </div>
+                <div class="stars" aria-label="5 stars">★★★★★</div>
+              </div>
+              <blockquote>
+                Rahul is one of the best employees I’ve worked with — proactive, reliable, and very strong with data. His reporting automation and dashboards made our process faster and more accurate.
+              </blockquote>
+              <div class="t-metrics">
+                <span class="pill-sm">Reliable</span>
+                <span class="pill-sm">High ownership</span>
+                <span class="pill-sm">Data-driven</span>
+              </div>
+            </figure>
+
+            <figure class="t-item">
+              <div class="t-head">
+                <img class="t-photo" src="assets/profile.png" alt="Testimonial photo" />
+                <div>
+                  <div class="t-name">Leah</div>
+                  <div class="t-role muted">Team Member</div>
+                </div>
+                <div class="stars" aria-label="5 stars">★★★★★</div>
+              </div>
+              <blockquote>
+                Rahul communicates clearly, asks the right questions, and delivers clean dashboards that stakeholders can understand. He’s consistent and always improves the workflow.
+              </blockquote>
+              <div class="t-metrics">
+                <span class="pill-sm">Clear communication</span>
+                <span class="pill-sm">Strong execution</span>
+                <span class="pill-sm">Quality dashboards</span>
+              </div>
+            </figure>
+
+            <figure class="t-item">
+              <div class="t-head">
+                <img class="t-photo" src="assets/profile.png" alt="Testimonial photo" />
+                <div>
+                  <div class="t-name">Volunteer Coordinator</div>
+                  <div class="t-role muted">UB Farmstand</div>
+                </div>
+                <div class="stars" aria-label="5 stars">★★★★★</div>
+              </div>
+              <blockquote>
+                Rahul improved inventory and donation tracking and made forecasting easier for the team. His reporting added structure and clarity.
+              </blockquote>
+              <div class="t-metrics">
+                <span class="pill-sm">Operational impact</span>
+                <span class="pill-sm">Better forecasting</span>
+                <span class="pill-sm">Reduced errors</span>
+              </div>
+            </figure>
+
+          </div>
+        </div>
+
+        <button class="car-btn" id="tNext" aria-label="Next testimonial">›</button>
+      </div>
+
+      <div class="dots reveal" id="tDots" aria-label="Testimonial dots"></div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT (Formspree working) ====== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Contact</h2>
+        <p class="muted">Send a message — it will go directly to my email via Formspree.</p>
+      </div>
+
+      <div class="contact-grid">
+        <form class="glass form reveal" id="contactForm"
+          action="https://formspree.io/f/xdaopnwq"
+          method="POST">
+
+          <input type="hidden" name="_subject" value="New message from Rahul's Portfolio" />
+
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+            <small class="error" data-for="name"></small>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@email.com" required />
+            <small class="error" data-for="email"></small>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me what you need..." required></textarea>
+            <small class="error" data-for="message"></small>
+          </div>
+
+          <button class="btn btn-submit" type="submit">
+            <span>Send Message</span>
+            <span class="btn-spark" aria-hidden="true"></span>
+          </button>
+
+          <div class="alert success" id="successAlert" role="status" aria-live="polite">
+            ✅ Message sent successfully!
+          </div>
+          <div class="alert error" id="errorAlert" role="status" aria-live="polite">
+            ❌ Something went wrong. Please try again.
+          </div>
+        </form>
+
+        <div class="contact-side">
+          <div class="glass info-card reveal">
+            <h3>Contact Info</h3>
+
+            <a class="info-row" href="mailto:rahulelhan@gmail.com">
+              <span class="ico">✉️</span>
+              <span>
+                <span class="muted">Email</span><br />
+                <strong>rahulelhan@gmail.com</strong>
+              </span>
+            </a>
+
+            <a class="info-row" href="tel:+17167481871">
+              <span class="ico">📞</span>
+              <span>
+                <span class="muted">Phone</span><br />
+                <strong>(716) 748-1871</strong>
+              </span>
+            </a>
+
+            <div class="info-row">
+              <span class="ico">📍</span>
+              <span>
+                <span class="muted">Location</span><br />
+                <strong>New York, USA</strong>
+              </span>
+            </div>
+          </div>
+
+          <div class="glass info-card reveal">
+            <h3>Social</h3>
+            <div class="social">
+              <a class="social-btn" target="_blank" rel="noreferrer" href="https://github.com/Rahul-data-7" aria-label="GitHub">
+                <span class="s-ico">⌂</span><span>GitHub</span>
+              </a>
+              <a class="social-btn" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/rahul-07t077777/" aria-label="LinkedIn">
+                <span class="s-ico">in</span><span>LinkedIn</span>
+              </a>
+              <a class="social-btn" target="_blank" rel="noreferrer" href="mailto:rahulelhan@gmail.com" aria-label="Email">
+                <span class="s-ico">✉</span><span>Email</span>
+              </a>
+            </div>
           </div>
 
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer class="footer">
-      <p>Built with ❤️ by Rahul</p>
-    </footer>
-  </main>
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand">
+          <span class="brand-dot"></span><span>Rahul</span>
+        </div>
+        <p class="muted">
+          Data Analyst · Python · SQL · Power BI · Tableau
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Pages</h4>
+        <a href="experience.html">Experience</a>
+        <a href="education.html">Education</a>
+        <a href="skills.html">Skills</a>
+        <a href="certifications.html">Certifications</a>
+      </div>
+
+      <div class="footer-right">
+        <p class="muted">
+          Made with <span class="heart" aria-label="love">♥</span> by Rahul
+        </p>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
