@@ -4,250 +4,237 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rahul | Data Analyst</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
 
-<header class="navbar">
-  <div class="logo">Rahul<span class="dot">.</span></div>
-  <nav class="nav-links">
-    <a href="index.html" class="active">Home</a>
-    <a href="experience.html">Experience</a>
-    <a href="education.html">Education</a>
-    <a href="skills.html">Skills</a>
-    <a href="certifications.html">Certifications</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Rahul<span class="dot">.</span></a>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-card glass">
+      <!-- Desktop links -->
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="active">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="education.html">Education</a>
+        <a href="skills.html">Skills</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-      <div class="hero-badge">Open to Data Analyst / BI Analyst roles</div>
-
-      <h2 class="name-line">Hi, I’m <span class="grad-text">Rahul</span></h2>
-
-      <h1 class="power-title">
-        End-to-End Data Analysis <span class="sep">|</span>
-        Empowering Data-Driven Strategy through
-        <span class="grad-text">Automation</span> & Precision
-        <span class="grad-text">BI</span>
-      </h1>
-
-      <p class="hero-text">
-        Specializing in automated BI solutions, I build scalable data models and
-        high-impact visualizations that drive operational excellence and
-        measurable ROI.
-      </p>
-
-      <div class="core-row">
-        <div class="core-pill">
-          <div class="core-action">Data Wrangling</div>
-          <div class="core-desc">Single source of truth</div>
-        </div>
-        <div class="core-pill">
-          <div class="core-action">Advanced Analytics</div>
-          <div class="core-desc">Growth & efficiency drivers</div>
-        </div>
-        <div class="core-pill">
-          <div class="core-action">BI Development</div>
-          <div class="core-desc">Executive-ready views</div>
-        </div>
-      </div>
-
-      <div class="hero-buttons">
-        <a href="#projects" class="btn primary">View Projects</a>
-        <a href="#contact" class="btn outline">Contact Me</a>
-      </div>
-
-      <div class="hero-mini hero-bottom">
-        <span class="mini-chip">Data Integrity</span>
-        <span class="mini-chip">Business Intelligence</span>
-        <span class="mini-chip">Statistical Modeling</span>
-        <span class="mini-chip">Workflow Optimization</span>
-      </div>
-
+      <!-- Mobile hamburger -->
+      <button class="hamburger" id="openMenu" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </div>
-</section>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-  <div class="container glass">
-    <h2>About Me</h2>
-    <p class="lead">
-      I am a Business Analytics graduate focused on building reliable, scalable reporting systems.
-      My work spans data preparation, analytics, and BI development — delivering insights that
-      decision-makers can trust.
-    </p>
-
-    <div class="about-grid">
-      <div class="card glass">
-        <h3>Strengths</h3>
-        <p class="muted">Data wrangling, KPI reporting, dashboard storytelling, stakeholder-ready insights.</p>
+    <!-- Mobile overlay menu -->
+    <div class="mobile-overlay" id="mobileMenu" aria-hidden="true">
+      <div class="mobile-top">
+        <div class="mobile-brand">Rahul<span class="dot">.</span></div>
+        <button class="close" id="closeMenu" aria-label="Close menu">✕</button>
       </div>
 
-      <div class="card glass">
-        <h3>Tools</h3>
-        <p class="muted">Python, SQL, Power BI, Tableau, Excel, Statistics, automation workflows.</p>
-      </div>
+      <nav class="mobile-links" aria-label="Mobile">
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="education.html">Education</a>
+        <a href="skills.html">Skills</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-      <div class="card glass">
-        <h3>Value</h3>
-        <p class="muted">Clean data + clear dashboards that help teams move faster with confidence.</p>
+      <div class="mobile-actions">
+        <a class="btn primary" href="#projects">View Projects</a>
+        <a class="btn outline" href="#contact">Contact Me</a>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- PROJECTS -->
-<section id="projects" class="section">
-  <div class="container">
-    <h2>Projects</h2>
-    <p class="lead center">Recruiter-friendly summaries (problem → approach → outcome).</p>
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="badge">Open to Data Analyst / BI Analyst roles</div>
 
-    <div class="project-grid">
+        <h1 class="headline">
+          End-to-End Data Analysis <span class="sep">|</span>
+          Empowering Data-Driven Strategy through <span class="grad">Automation</span> & Precision <span class="grad">BI</span>
+        </h1>
 
-      <div class="project-card glass">
-        <div class="project-top">
-          <h3>Retail Sales Analytics</h3>
-          <span class="pill">Case Study</span>
-        </div>
-        <p class="muted">Trend analysis + KPI reporting for product performance and seasonality.</p>
-        <ul class="bullets">
-          <li>Cleaned and prepared sales datasets for consistent reporting.</li>
-          <li>Identified revenue drivers and performance drops.</li>
-          <li>Built BI-ready outputs for dashboard integration.</li>
-        </ul>
-        <div class="tag-row">
-          <span class="tag-chip">SQL</span>
-          <span class="tag-chip">Python</span>
-          <span class="tag-chip">Power BI</span>
-        </div>
-      </div>
-
-      <div class="project-card glass">
-        <div class="project-top">
-          <h3>Financial KPI Dashboard</h3>
-          <span class="pill">Case Study</span>
-        </div>
-        <p class="muted">KPI dashboard design for performance tracking and variance reporting.</p>
-        <ul class="bullets">
-          <li>Defined key metrics for finance and operational review.</li>
-          <li>Structured tables for reliable refresh and reporting.</li>
-          <li>Designed executive-friendly KPI views.</li>
-        </ul>
-        <div class="tag-row">
-          <span class="tag-chip">Excel</span>
-          <span class="tag-chip">Power BI</span>
-          <span class="tag-chip">SQL</span>
-        </div>
-      </div>
-
-      <div class="project-card glass">
-        <div class="project-top">
-          <h3>Automated Reporting Pipeline</h3>
-          <span class="pill">Case Study</span>
-        </div>
-        <p class="muted">Automated reporting workflows to reduce manual effort and improve reliability.</p>
-        <ul class="bullets">
-          <li>Automated data cleaning and export-ready outputs.</li>
-          <li>Standardized report structure for repeatable results.</li>
-          <li>Improved consistency for weekly/monthly reporting.</li>
-        </ul>
-        <div class="tag-row">
-          <span class="tag-chip">Python</span>
-          <span class="tag-chip">Excel</span>
-          <span class="tag-chip">Automation</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT (links + resume + form) -->
-<section id="contact" class="section">
-  <div class="container glass">
-    <h2>Contact</h2>
-    <p class="lead">
-      Open to Data Analyst / BI Analyst opportunities. Feel free to reach out — I respond quickly.
-    </p>
-
-   <div class="contact-grid">
-  <div class="contact-card glass">
-    <h3>📧 Email</h3>
-    <p><strong>rahulelhan@gmail.com</strong></p>
-  </div>
-
-  <div class="contact-card glass">
-    <h3>💼 LinkedIn</h3>
-    <p>
-      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener">
-        linkedin.com/in/YOUR-LINKEDIN
-      </a>
-    </p>
-  </div>
-
-  <div class="contact-card glass">
-    <h3>🧑‍💻 GitHub</h3>
-    <p>
-      <a href="https://github.com/Rahul-data-7" target="_blank" rel="noopener">
-        github.com/Rahul-data-7
-      </a>
-    </p>
-  </div>
-
-  <div class="contact-card glass">
-    <h3>📄 Resume</h3>
-    <p>
-      <a href="assets/Rahul_Tellapuram_Resume.pdf" target="_blank" rel="noopener">
-        Download Resume (PDF)
-      </a>
-    </p>
-  </div>
-</div>
-
-
-      <div class="contact-card glass">
-        <h3>Resume</h3>
-        <p>
-          <a href="assets/Rahul_Tellapuram_Resume.pdf" target="_blank">
-            Download Resume (PDF)
-          </a>
+        <p class="subheadline">
+          I build reliable reporting systems and executive-ready dashboards — from clean data models to high-impact visual storytelling.
         </p>
-      </div>
-    </div>
 
-    <div class="contact-form glass">
-      <h3>Send a Message</h3>
-
-      <form>
-        <div class="form-row">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
+        <div class="cta-row">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn outline" href="#contact">Contact Me</a>
         </div>
 
-        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <!-- Process Boxes -->
+        <div class="process-grid">
+          <div class="process-card">
+            <div class="p-icon">🧹</div>
+            <div class="p-title">Data Wrangling</div>
+            <div class="p-sub">Single source of truth</div>
+          </div>
 
-        <button type="submit" class="btn primary">Send Message</button>
-      </form>
+          <div class="process-card">
+            <div class="p-icon">📈</div>
+            <div class="p-title">Advanced Analytics</div>
+            <div class="p-sub">Growth & efficiency drivers</div>
+          </div>
 
-      <p class="muted small">* This form is for direct outreach. No spam please.</p>
-    </div>
+          <div class="process-card">
+            <div class="p-icon">📊</div>
+            <div class="p-title">BI Development</div>
+            <div class="p-sub">Executive-ready views</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  </div>
-</section>
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-lead">Recruiter-friendly summaries (Problem → Approach → Outcome).</p>
 
-<footer class="footer">
-  <p>Built with ❤️ by Rahul</p>
-</footer>
+        <div class="card-grid">
+          <article class="glass-card">
+            <h3>Retail Sales Analytics</h3>
+            <p class="muted">KPI reporting, seasonality trends, and product performance insights.</p>
+          </article>
+
+          <article class="glass-card">
+            <h3>Financial KPI Dashboard</h3>
+            <p class="muted">Executive-ready dashboards with variance and performance tracking.</p>
+          </article>
+
+          <article class="glass-card">
+            <h3>Automated Reporting Pipeline</h3>
+            <p class="muted">Repeatable reporting workflows for faster, consistent updates.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="glass-card pad-lg">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-lead">Fastest way: email or LinkedIn.</p>
+
+          <!-- Icons only -->
+          <div class="contact-icons">
+            <a class="icon-card" href="mailto:rahulelhan@gmail.com" aria-label="Email">📧<span>Email</span></a>
+            <a class="icon-card" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener" aria-label="LinkedIn">💼<span>LinkedIn</span></a>
+            <a class="icon-card" href="https://github.com/Rahul-data-7" target="_blank" rel="noopener" aria-label="GitHub">🧑‍💻<span>GitHub</span></a>
+            <a class="icon-card" href="assets/Rahul_Tellapuram_Resume.pdf" target="_blank" rel="noopener" aria-label="Resume">📄<span>Resume</span></a>
+          </div>
+
+          <!-- Formspree form (GitHub Pages-friendly) -->
+          <div class="form-wrap">
+            <h3 class="form-title">✉️ Send a Message</h3>
+
+            <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+              <div class="form-row">
+                <input name="name" type="text" placeholder="Your Name" required />
+                <input name="email" type="email" placeholder="Your Email" required />
+              </div>
+
+              <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+              <input type="hidden" name="source" value="Portfolio - GitHub Pages" />
+
+              <button id="submitBtn" type="submit" class="btn primary">Send Message</button>
+              <div id="formStatus" class="form-status" aria-live="polite"></div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Built with ❤️ by Rahul</p>
+    </footer>
+  </main>
+
+  <script>
+    const openBtn = document.getElementById("openMenu");
+    const closeBtn = document.getElementById("closeMenu");
+    const menu = document.getElementById("mobileMenu");
+
+    function openMenu(){
+      menu.classList.add("open");
+      menu.setAttribute("aria-hidden", "false");
+      openBtn.setAttribute("aria-expanded", "true");
+      document.body.style.overflow = "hidden";
+    }
+    function closeMenu(){
+      menu.classList.remove("open");
+      menu.setAttribute("aria-hidden", "true");
+      openBtn.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+    }
+
+    openBtn.addEventListener("click", openMenu);
+    closeBtn.addEventListener("click", closeMenu);
+
+    // close menu when clicking a link
+    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
+
+    // ESC close
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMenu();
+    });
+
+    // Formspree submit (status message)
+    const form = document.getElementById("contactForm");
+    const statusEl = document.getElementById("formStatus");
+    const btn = document.getElementById("submitBtn");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      statusEl.textContent = "";
+      statusEl.className = "form-status";
+      btn.disabled = true;
+      btn.textContent = "Sending...";
+
+      try {
+        const formData = new FormData(form);
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: { "Accept": "application/json" }
+        });
+
+        if (response.ok) {
+          form.reset();
+          statusEl.className = "form-status success";
+          statusEl.textContent = "✅ Message sent! I’ll get back to you soon.";
+        } else {
+          statusEl.className = "form-status error";
+          statusEl.textContent = "❌ Something went wrong. Please email me directly.";
+        }
+      } catch {
+        statusEl.className = "form-status error";
+        statusEl.textContent = "❌ Network error. Please email me directly.";
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "Send Message";
+      }
+    });
+  </script>
 
 </body>
 </html>
-
