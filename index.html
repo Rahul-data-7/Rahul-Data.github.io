@@ -4,18 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rahul | Data Analyst</title>
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <header class="navbar">
   <div class="logo">Rahul<span class="dot">.</span></div>
   <nav class="nav-links">
-    <a href="#about">About</a>
+    <a href="index.html" class="active">Home</a>
+    <a href="experience.html">Experience</a>
+    <a href="education.html">Education</a>
+    <a href="skills.html">Skills</a>
+    <a href="certifications.html">Certifications</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -26,13 +28,10 @@
   <div class="hero-inner">
     <div class="hero-card glass">
 
-      <!-- Job badge -->
       <div class="hero-badge">Open to Data Analyst / BI Analyst roles</div>
 
-      <!-- Name -->
       <h2 class="name-line">Hi, I’m <span class="grad-text">Rahul</span></h2>
 
-      <!-- Power headline -->
       <h1 class="power-title">
         End-to-End Data Analysis <span class="sep">|</span>
         Empowering Data-Driven Strategy through
@@ -40,38 +39,32 @@
         <span class="grad-text">BI</span>
       </h1>
 
-      <!-- Main value sentence -->
       <p class="hero-text">
         Specializing in automated BI solutions, I build scalable data models and
         high-impact visualizations that drive operational excellence and
         measurable ROI.
       </p>
 
-      <!-- Core process -->
       <div class="core-row">
         <div class="core-pill">
           <div class="core-action">Data Wrangling</div>
           <div class="core-desc">Single source of truth</div>
         </div>
-
         <div class="core-pill">
           <div class="core-action">Advanced Analytics</div>
           <div class="core-desc">Growth & efficiency drivers</div>
         </div>
-
         <div class="core-pill">
           <div class="core-action">BI Development</div>
           <div class="core-desc">Executive-ready views</div>
         </div>
       </div>
 
-      <!-- CTA buttons -->
       <div class="hero-buttons">
         <a href="#projects" class="btn primary">View Projects</a>
         <a href="#contact" class="btn outline">Contact Me</a>
       </div>
 
-      <!-- Senior capability chips (BOTTOM ONLY) -->
       <div class="hero-mini hero-bottom">
         <span class="mini-chip">Data Integrity</span>
         <span class="mini-chip">Business Intelligence</span>
@@ -88,10 +81,27 @@
   <div class="container glass">
     <h2>About Me</h2>
     <p class="lead">
-      I am a Business Analytics graduate focused on building reliable, scalable
-      reporting systems. My work spans data preparation, analytics, and BI
-      development — delivering insights that decision-makers can trust.
+      I am a Business Analytics graduate focused on building reliable, scalable reporting systems.
+      My work spans data preparation, analytics, and BI development — delivering insights that
+      decision-makers can trust.
     </p>
+
+    <div class="about-grid">
+      <div class="card glass">
+        <h3>Strengths</h3>
+        <p class="muted">Data wrangling, KPI reporting, dashboard storytelling, stakeholder-ready insights.</p>
+      </div>
+
+      <div class="card glass">
+        <h3>Tools</h3>
+        <p class="muted">Python, SQL, Power BI, Tableau, Excel, Statistics, automation workflows.</p>
+      </div>
+
+      <div class="card glass">
+        <h3>Value</h3>
+        <p class="muted">Clean data + clear dashboards that help teams move faster with confidence.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -99,45 +109,130 @@
 <section id="projects" class="section">
   <div class="container">
     <h2>Projects</h2>
+    <p class="lead center">Recruiter-friendly summaries (problem → approach → outcome).</p>
 
     <div class="project-grid">
+
       <div class="project-card glass">
-        <h3>Retail Sales Analytics</h3>
-        <p>
-          Built trend analysis and KPI reporting to understand product
-          performance and seasonality.
-        </p>
+        <div class="project-top">
+          <h3>Retail Sales Analytics</h3>
+          <span class="pill">Case Study</span>
+        </div>
+        <p class="muted">Trend analysis + KPI reporting for product performance and seasonality.</p>
+        <ul class="bullets">
+          <li>Cleaned and prepared sales datasets for consistent reporting.</li>
+          <li>Identified revenue drivers and performance drops.</li>
+          <li>Built BI-ready outputs for dashboard integration.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag-chip">SQL</span>
+          <span class="tag-chip">Python</span>
+          <span class="tag-chip">Power BI</span>
+        </div>
       </div>
 
       <div class="project-card glass">
-        <h3>Financial KPI Dashboard</h3>
-        <p>
-          Designed executive dashboards to track performance metrics and
-          business outcomes.
-        </p>
+        <div class="project-top">
+          <h3>Financial KPI Dashboard</h3>
+          <span class="pill">Case Study</span>
+        </div>
+        <p class="muted">KPI dashboard design for performance tracking and variance reporting.</p>
+        <ul class="bullets">
+          <li>Defined key metrics for finance and operational review.</li>
+          <li>Structured tables for reliable refresh and reporting.</li>
+          <li>Designed executive-friendly KPI views.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag-chip">Excel</span>
+          <span class="tag-chip">Power BI</span>
+          <span class="tag-chip">SQL</span>
+        </div>
       </div>
 
       <div class="project-card glass">
-        <h3>Automated Reporting Pipeline</h3>
-        <p>
-          Automated recurring reports to improve efficiency and data reliability.
-        </p>
+        <div class="project-top">
+          <h3>Automated Reporting Pipeline</h3>
+          <span class="pill">Case Study</span>
+        </div>
+        <p class="muted">Automated reporting workflows to reduce manual effort and improve reliability.</p>
+        <ul class="bullets">
+          <li>Automated data cleaning and export-ready outputs.</li>
+          <li>Standardized report structure for repeatable results.</li>
+          <li>Improved consistency for weekly/monthly reporting.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag-chip">Python</span>
+          <span class="tag-chip">Excel</span>
+          <span class="tag-chip">Automation</span>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- CONTACT (links + resume + form) -->
 <section id="contact" class="section">
   <div class="container glass">
     <h2>Contact</h2>
-    <p>
-      Email: <strong>rahulelhan@gmail.com</strong>
+    <p class="lead">
+      Open to Data Analyst / BI Analyst opportunities. Feel free to reach out — I respond quickly.
     </p>
+
+    <div class="contact-grid">
+      <div class="contact-card glass">
+        <h3>Email</h3>
+        <p><strong>rahulelhan@gmail.com</strong></p>
+      </div>
+
+      <div class="contact-card glass">
+        <h3>LinkedIn</h3>
+        <p>
+          <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank">
+            linkedin.com/in/YOUR-LINKEDIN
+          </a>
+        </p>
+      </div>
+
+      <div class="contact-card glass">
+        <h3>GitHub</h3>
+        <p>
+          <a href="https://github.com/Rahul-data-7" target="_blank">
+            github.com/Rahul-data-7
+          </a>
+        </p>
+      </div>
+
+      <div class="contact-card glass">
+        <h3>Resume</h3>
+        <p>
+          <a href="assets/Rahul_Tellapuram_Resume.pdf" target="_blank">
+            Download Resume (PDF)
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="contact-form glass">
+      <h3>Send a Message</h3>
+
+      <form>
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+        </div>
+
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+
+        <button type="submit" class="btn primary">Send Message</button>
+      </form>
+
+      <p class="muted small">* This form is for direct outreach. No spam please.</p>
+    </div>
+
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
   <p>Built with ❤️ by Rahul</p>
 </footer>
