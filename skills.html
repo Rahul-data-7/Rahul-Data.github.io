@@ -3,195 +3,128 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rahul Tellapuram | Skills</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link rel="stylesheet" href="style.css" />
+  <title>Rahul | Skills</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header class="navbar" id="navbar">
-    <div class="logo">Rahul<span class="dot">.</span></div>
 
-    <nav class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="experience.html">Experience</a>
-      <a href="education.html">Education</a>
-      <a href="skills.html" class="active">Skills</a>
-      <a href="index.html#projects">Projects</a>
-      <a href="index.html#contact">Contact</a>
-    </nav>
+<header class="navbar">
+  <div class="logo">Rahul<span class="dot">.</span></div>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="experience.html">Experience</a>
+    <a href="education.html">Education</a>
+    <a href="skills.html" class="active">Skills</a>
+    <a href="certifications.html">Certifications</a>
+  </nav>
+</header>
 
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-  </header>
+<section class="page-hero section">
+  <div class="container">
+    <h1 class="page-title"><span class="grad-text">Skills</span></h1>
+    <p class="section-lead">Proficiency + where I used each skill.</p>
+  </div>
+</section>
 
-  <section class="page-hero section reveal">
-    <div class="container">
-      <h1 class="page-title"><span class="grad-text">Skills</span></h1>
-      <p class="section-lead">Proficiency + how I’ve applied each tool in projects.</p>
+<section class="section">
+  <div class="container skill-matrix">
 
-      <div class="hero-skill-grid">
-        <div class="chip">Python</div>
-        <div class="chip">SQL</div>
-        <div class="chip">Power BI</div>
-        <div class="chip">Tableau</div>
-        <div class="chip">Excel</div>
-        <div class="chip">Data Cleaning</div>
-        <div class="chip">Data Modeling</div>
-        <div class="chip">Dashboards</div>
-        <div class="chip">R Studio</div>
+    <div class="skill-card glass">
+      <div class="skill-top">
+        <h3>SQL</h3>
+        <span class="level intermediate">Intermediate</span>
+      </div>
+      <div class="meter"><div class="meter-fill" style="width:70%"></div></div>
+      <div class="used">
+        <div class="used-title">Used in:</div>
+        <div class="used-tags">
+          <span class="tag-chip">Retail Sales Analytics</span>
+          <span class="tag-chip">Financial KPI Dashboard</span>
+        </div>
       </div>
     </div>
-  </section>
 
-  <section class="section reveal">
-    <div class="container">
-      <h2>Skill Proficiency & Usage</h2>
-      <p class="section-lead">Each skill includes confidence level and where it was used.</p>
-
-      <div class="skill-matrix">
-        <!-- Python -->
-        <div class="skill-card glass">
-          <div class="skill-top">
-            <h3>Python</h3>
-            <span class="level intermediate">Intermediate</span>
-          </div>
-          <p class="muted">Data cleaning, EDA, automation scripts, and reporting outputs.</p>
-          <div class="meter"><div class="meter-fill" style="width:75%"></div></div>
-          <div class="used">
-            <span class="used-title">Used in:</span>
-            <div class="used-tags">
-              <span class="tag-chip">Retail Sales Analytics</span>
-              <span class="tag-chip">Automated Reporting Pipeline</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- SQL -->
-        <div class="skill-card glass">
-          <div class="skill-top">
-            <h3>SQL</h3>
-            <span class="level intermediate">Intermediate</span>
-          </div>
-          <p class="muted">Joins, aggregations, KPI queries, reporting tables and metrics.</p>
-          <div class="meter"><div class="meter-fill" style="width:70%"></div></div>
-          <div class="used">
-            <span class="used-title">Used in:</span>
-            <div class="used-tags">
-              <span class="tag-chip">Retail Sales Analytics</span>
-              <span class="tag-chip">Financial KPI Dashboard</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Power BI -->
-        <div class="skill-card glass">
-          <div class="skill-top">
-            <h3>Power BI</h3>
-            <span class="level intermediate">Intermediate</span>
-          </div>
-          <p class="muted">Dashboards, KPIs, drilldowns, interactive reporting.</p>
-          <div class="meter"><div class="meter-fill" style="width:78%"></div></div>
-          <div class="used">
-            <span class="used-title">Used in:</span>
-            <div class="used-tags">
-              <span class="tag-chip">Retail Sales Analytics</span>
-              <span class="tag-chip">Financial KPI Dashboard</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Data Cleaning -->
-        <div class="skill-card glass">
-          <div class="skill-top">
-            <h3>Data Cleaning</h3>
-            <span class="level intermediate">Intermediate</span>
-          </div>
-          <p class="muted">Missing values, duplicates, formatting, and preparing datasets.</p>
-          <div class="meter"><div class="meter-fill" style="width:72%"></div></div>
-          <div class="used">
-            <span class="used-title">Used in:</span>
-            <div class="used-tags">
-              <span class="tag-chip">Retail Sales Analytics</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tableau -->
-        <div class="skill-card glass">
-          <div class="skill-top">
-            <h3>Tableau</h3>
-            <span class="level beginner">Beginner</span>
-          </div>
-          <p class="muted">Basic dashboards and exploratory visualizations.</p>
-          <div class="meter"><div class="meter-fill" style="width:45%"></div></div>
-          <div class="used">
-            <span class="used-title">Used in:</span>
-            <div class="used-tags">
-              <span class="tag-chip">Portfolio Visuals</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Excel -->
-        <div class="skill-card glass">
-          <div class="skill-top">
-            <h3>Excel</h3>
-            <span class="level advanced">Advanced</span>
-          </div>
-          <p class="muted">Pivot tables, reporting, KPI tracking, and business analysis workflows.</p>
-          <div class="meter"><div class="meter-fill" style="width:88%"></div></div>
-          <div class="used">
-            <span class="used-title">Used in:</span>
-            <div class="used-tags">
-              <span class="tag-chip">Financial KPI Dashboard</span>
-              <span class="tag-chip">Automated Reporting Pipeline</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- R Studio -->
-        <div class="skill-card glass">
-          <div class="skill-top">
-            <h3>R Studio</h3>
-            <span class="level beginner">Beginner</span>
-          </div>
-          <p class="muted">Basic statistics practice and academic analysis.</p>
-          <div class="meter"><div class="meter-fill" style="width:35%"></div></div>
-          <div class="used">
-            <span class="used-title">Used in:</span>
-            <div class="used-tags">
-              <span class="tag-chip">Coursework</span>
-            </div>
-          </div>
-        </div>
+    <div class="skill-card glass">
+      <div class="skill-top">
+        <h3>Python (Pandas)</h3>
+        <span class="level intermediate">Intermediate</span>
       </div>
-
-      <div class="note glass">
-        Want to make this even stronger? Add GitHub links inside each project card on the Home page.
+      <div class="meter"><div class="meter-fill" style="width:72%"></div></div>
+      <div class="used">
+        <div class="used-title">Used in:</div>
+        <div class="used-tags">
+          <span class="tag-chip">Retail Sales Analytics</span>
+          <span class="tag-chip">Automated Reporting</span>
+        </div>
       </div>
     </div>
-  </section>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div>
-        <div class="logo small">Rahul<span class="dot">.</span></div>
-        <p class="muted">Built with ❤️ and clean code.</p>
+    <div class="skill-card glass">
+      <div class="skill-top">
+        <h3>Power BI</h3>
+        <span class="level intermediate">Intermediate</span>
       </div>
-
-      <div class="footer-links">
-        <a href="experience.html">Experience</a>
-        <a href="education.html">Education</a>
-        <a href="skills.html">Skills</a>
-        <a href="index.html#contact">Contact</a>
+      <div class="meter"><div class="meter-fill" style="width:68%"></div></div>
+      <div class="used">
+        <div class="used-title">Used in:</div>
+        <div class="used-tags">
+          <span class="tag-chip">Retail Sales Analytics</span>
+          <span class="tag-chip">Financial KPI Dashboard</span>
+        </div>
       </div>
     </div>
-  </footer>
 
-  <script src="script.js"></script>
+    <div class="skill-card glass">
+      <div class="skill-top">
+        <h3>Excel</h3>
+        <span class="level advanced">Advanced</span>
+      </div>
+      <div class="meter"><div class="meter-fill" style="width:85%"></div></div>
+      <div class="used">
+        <div class="used-title">Used in:</div>
+        <div class="used-tags">
+          <span class="tag-chip">Financial KPI Dashboard</span>
+          <span class="tag-chip">Automated Reporting</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-card glass">
+      <div class="skill-top">
+        <h3>Tableau</h3>
+        <span class="level beginner">Beginner</span>
+      </div>
+      <div class="meter"><div class="meter-fill" style="width:45%"></div></div>
+      <div class="used">
+        <div class="used-title">Used in:</div>
+        <div class="used-tags">
+          <span class="tag-chip">Exploratory Analysis</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-card glass">
+      <div class="skill-top">
+        <h3>Statistics / Modeling</h3>
+        <span class="level intermediate">Intermediate</span>
+      </div>
+      <div class="meter"><div class="meter-fill" style="width:65%"></div></div>
+      <div class="used">
+        <div class="used-title">Used in:</div>
+        <div class="used-tags">
+          <span class="tag-chip">KPI Design</span>
+          <span class="tag-chip">Trend Analysis</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <p>Built with ❤️ by Rahul</p>
+</footer>
+
 </body>
 </html>
