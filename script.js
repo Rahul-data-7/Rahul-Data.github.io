@@ -1,45 +1,75 @@
-// Navbar scroll effect
-const navbar = document.getElementById("navbar");
+(function () {
+  const openBtn = document.getElementById("openMenu");
+  const closeBtn = document.getElementById("closeMenu");
+  const menu = document.getElementById("mobileMenu");
 
-// Mobile menu toggle
-const navToggle = document.getElementById("navToggle");
-const navLinks = document.getElementById("navLinks");
-
-if (navToggle && navLinks) {
-  navToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-  });
-
-  // Close menu when clicking a link (mobile)
-  navLinks.querySelectorAll("a").forEach(a => {
-    a.addEventListener("click", () => navLinks.classList.remove("open"));
-  });
-}
-
-window.addEventListener("scroll", () => {
-  if (!navbar) return;
-  if (window.scrollY > 50) {
-    navbar.style.background = "rgba(0,0,0,0.55)";
-    navbar.style.backdropFilter = "blur(16px)";
-  } else {
-    navbar.style.background = "rgba(0,0,0,0.25)";
-    navbar.style.backdropFilter = "blur(12px)";
-  }
-});
-
-// Scroll reveal
-const reveals = document.querySelectorAll(".reveal");
-
-function revealOnScroll() {
-  reveals.forEach((section) => {
-    const windowHeight = window.innerHeight;
-    const revealTop = section.getBoundingClientRect().top;
-
-    if (revealTop < windowHeight - 120) {
-      section.classList.add("active");
+  if (openBtn && closeBtn && menu) {
+    function openMenu() {
+      menu.classList.add("open");
+      menu.setAttribute("aria-hidden", "false");
+      openBtn.setAttribute("aria-expanded", "true");
+      document.body.style.overflow = "hidden";
     }
-  });
-}
 
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
+    function closeMenu() {
+      menu.classList.remove("open");
+      menu.setAttribute("aria-hidden", "true");
+      openBtn.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+    }
+
+    openBtn.addEventListener("click", openMenu);
+    closeBtn.addEventListener("click", closeMenu);
+
+    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
+
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMenu();
+    });
+  }
+
+  // Form submission (works if you set Formspree; otherwise fallback still lets user email you)
+  const form = document.getElementById("contactForm");
+  const statusEl = document.getElementById("formStatus");
+  const btn = document.getElementById("submitBtn");
+
+  if (form && statusEl && btn) {
+    form.addEventListener("submit", async (e) => {
+      const action = form.getAttribute("action") || "";
+      const isFormspree = action.includes("formspree.io");
+
+      // If not using Formspree, just let the browser do normal submit (or you can remove this)
+      if (!isFormspree) return;
+
+      e.preventDefault();
+      statusEl.textContent = "";
+      statusEl.className = "form-status";
+      btn.disabled = true;
+      btn.textContent = "Sending...";
+
+      try {
+        const formData = new FormData(form);
+        const response = await fetch(action, {
+          method: "POST",
+          body: formData,
+          headers: { "Accept": "application/json" }
+        });
+
+        if (response.ok) {
+          form.reset();
+          statusEl.className = "form-status success";
+          statusEl.textContent = "✅ Message sent! I’ll get back to you soon.";
+        } else {
+          statusEl.className = "form-status error";
+          statusEl.textContent = "❌ Message failed. Please email me directly.";
+        }
+      } catch {
+        statusEl.className = "form-status error";
+        statusEl.textContent = "❌ Network error. Please email me directly.";
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "Send Message";
+      }
+    });
+  }
+})();
