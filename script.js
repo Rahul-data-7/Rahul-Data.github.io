@@ -1,4 +1,5 @@
 (function () {
+  // ===== Mobile menu =====
   const openBtn = document.getElementById("openMenu");
   const closeBtn = document.getElementById("closeMenu");
   const menu = document.getElementById("mobileMenu");
@@ -28,7 +29,7 @@
     });
   }
 
-  // Contact form submit (Formspree)
+  // ===== Formspree submit =====
   const form = document.getElementById("contactForm");
   const statusEl = document.getElementById("formStatus");
   const btn = document.getElementById("submitBtn");
@@ -65,6 +66,28 @@
         btn.disabled = false;
         btn.textContent = "Send Message";
       }
+    });
+  }
+
+  // ===== Projects filter =====
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const projectCards = document.querySelectorAll(".project-card");
+
+  if (filterButtons.length && projectCards.length) {
+    filterButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        filterButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const filter = btn.dataset.filter;
+
+        projectCards.forEach(card => {
+          const tags = (card.dataset.tags || "").split(" ");
+          const show = filter === "all" || tags.includes(filter);
+
+          card.classList.toggle("hidden", !show);
+        });
+      });
     });
   }
 })();
