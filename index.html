@@ -120,27 +120,149 @@
       </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- PROJECTS (UPGRADED) -->
     <section id="projects" class="section">
       <div class="container">
         <h2 class="section-title">Projects</h2>
-        <p class="section-lead">Recruiter-friendly summaries (Problem → Approach → Outcome).</p>
+        <p class="section-lead">
+          5 portfolio-ready projects — each built to show impact, clean analysis, and executive communication.
+        </p>
 
-        <div class="card-grid">
-          <article class="glass-card">
-            <h3>Retail Sales Analytics</h3>
-            <p class="muted">KPI reporting, seasonality trends, and product performance insights.</p>
+        <!-- Filters -->
+        <div class="filters" role="tablist" aria-label="Project Filters">
+          <button class="filter-btn active" data-filter="all" type="button">All</button>
+          <button class="filter-btn" data-filter="bi" type="button">BI</button>
+          <button class="filter-btn" data-filter="sql" type="button">SQL</button>
+          <button class="filter-btn" data-filter="python" type="button">Python</button>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- 1 -->
+          <article class="project-card glass-card" data-tags="bi sql">
+            <div class="project-top">
+              <h3>Executive KPI Dashboard (Power BI)</h3>
+              <span class="pill">BI</span>
+            </div>
+
+            <p class="muted">
+              Built an executive-ready KPI dashboard with drilldowns, trend views, and performance variance.
+            </p>
+
+            <div class="metrics">
+              <div class="metric"><span class="metric-num">12+</span><span class="metric-label">KPIs</span></div>
+              <div class="metric"><span class="metric-num">3</span><span class="metric-label">Views</span></div>
+              <div class="metric"><span class="metric-num">Weekly</span><span class="metric-label">Reporting</span></div>
+            </div>
+
+            <div class="tags">
+              <span class="tag">Power BI</span>
+              <span class="tag">DAX</span>
+              <span class="tag">SQL</span>
+              <span class="tag">KPI Design</span>
+            </div>
           </article>
 
-          <article class="glass-card">
-            <h3>Financial KPI Dashboard</h3>
-            <p class="muted">Executive-ready dashboards with variance and performance tracking.</p>
+          <!-- 2 -->
+          <article class="project-card glass-card" data-tags="sql">
+            <div class="project-top">
+              <h3>SQL Business Insights (PostgreSQL)</h3>
+              <span class="pill">SQL</span>
+            </div>
+
+            <p class="muted">
+              Designed analytical queries for cohort trends, retention, and revenue breakdowns using joins and window functions.
+            </p>
+
+            <div class="metrics">
+              <div class="metric"><span class="metric-num">25+</span><span class="metric-label">Queries</span></div>
+              <div class="metric"><span class="metric-num">6</span><span class="metric-label">Reports</span></div>
+              <div class="metric"><span class="metric-num">1</span><span class="metric-label">Data Model</span></div>
+            </div>
+
+            <div class="tags">
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Window Functions</span>
+              <span class="tag">CTEs</span>
+              <span class="tag">Data Modeling</span>
+            </div>
           </article>
 
-          <article class="glass-card">
-            <h3>Automated Reporting Pipeline</h3>
-            <p class="muted">Repeatable reporting workflows for faster, consistent updates.</p>
+          <!-- 3 -->
+          <article class="project-card glass-card" data-tags="python">
+            <div class="project-top">
+              <h3>Automated Data Cleaning Pipeline (Python)</h3>
+              <span class="pill">Python</span>
+            </div>
+
+            <p class="muted">
+              Built a reusable pipeline for cleaning datasets, handling missing values, and generating summary QA reports.
+            </p>
+
+            <div class="metrics">
+              <div class="metric"><span class="metric-num">30%</span><span class="metric-label">Time Saved</span></div>
+              <div class="metric"><span class="metric-num">10+</span><span class="metric-label">Checks</span></div>
+              <div class="metric"><span class="metric-num">1</span><span class="metric-label">Template</span></div>
+            </div>
+
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">EDA</span>
+              <span class="tag">Data Quality</span>
+            </div>
           </article>
+
+          <!-- 4 -->
+          <article class="project-card glass-card" data-tags="bi python">
+            <div class="project-top">
+              <h3>Sales Forecast & Trend Analysis</h3>
+              <span class="pill">Analytics</span>
+            </div>
+
+            <p class="muted">
+              Forecasted sales trends and identified high-impact growth drivers using statistical modeling and visual storytelling.
+            </p>
+
+            <div class="metrics">
+              <div class="metric"><span class="metric-num">5+</span><span class="metric-label">Drivers</span></div>
+              <div class="metric"><span class="metric-num">2</span><span class="metric-label">Models</span></div>
+              <div class="metric"><span class="metric-num">Weekly</span><span class="metric-label">Insights</span></div>
+            </div>
+
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Stats</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">Forecasting</span>
+            </div>
+          </article>
+
+          <!-- 5 -->
+          <article class="project-card glass-card" data-tags="bi sql">
+            <div class="project-top">
+              <h3>Customer Segmentation Dashboard</h3>
+              <span class="pill">BI</span>
+            </div>
+
+            <p class="muted">
+              Created segmentation KPIs and dashboard views to compare cohorts, engagement, and profitability.
+            </p>
+
+            <div class="metrics">
+              <div class="metric"><span class="metric-num">4</span><span class="metric-label">Segments</span></div>
+              <div class="metric"><span class="metric-num">8+</span><span class="metric-label">KPIs</span></div>
+              <div class="metric"><span class="metric-num">2</span><span class="metric-label">Dashboards</span></div>
+            </div>
+
+            <div class="tags">
+              <span class="tag">SQL</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">Cohorts</span>
+              <span class="tag">Storytelling</span>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
@@ -152,7 +274,6 @@
           <h2 class="section-title">Contact</h2>
           <p class="section-lead">Fastest way: email or LinkedIn.</p>
 
-          <!-- icons only -->
           <div class="contact-icons">
             <a class="icon-card" href="mailto:rahulelhan@gmail.com" aria-label="Email">📧<span>Email</span></a>
             <a class="icon-card" href="https://www.linkedin.com/in/rahul-07t077777/" target="_blank" rel="noopener" aria-label="LinkedIn">💼<span>LinkedIn</span></a>
@@ -165,7 +286,6 @@
           <div class="form-wrap">
             <h3 class="form-title">✉️ Send a Message</h3>
 
-            <!-- Formspree (your real endpoint) -->
             <form id="contactForm" action="https://formspree.io/f/xdaopnwq" method="POST">
               <div class="form-row">
                 <input name="name" type="text" placeholder="Your Name" required />
@@ -192,4 +312,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
