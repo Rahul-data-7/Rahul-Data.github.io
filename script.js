@@ -93,38 +93,6 @@ rebuildDots();
 updateCarousel();
 window.addEventListener("resize", updateCarousel);
 
-// Testimonials carousel + dots
-const tTrack = document.getElementById("tTrack");
-const tDots = document.getElementById("tDots");
-const tPrev = document.getElementById("tPrev");
-const tNext = document.getElementById("tNext");
-const tItems = tTrack ? Array.from(tTrack.querySelectorAll(".t-item")) : [];
-let tIndex = 0;
-
-function buildTDots(){
-  if (!tDots) return;
-  tDots.innerHTML = "";
-  tItems.forEach((_, i) => {
-    const d = document.createElement("button");
-    d.className = "dot" + (i === tIndex ? " active" : "");
-    d.addEventListener("click", () => { tIndex = i; updateT(); });
-    tDots.appendChild(d);
-  });
-}
-function updateT(){
-  if (!tTrack || tItems.length === 0) return;
-  const gap = 12;
-  const w = tItems[0].getBoundingClientRect().width;
-  const offset = (w + gap) * tIndex;
-  tTrack.style.transform = `translateX(${-offset}px)`;
-  if (tDots) Array.from(tDots.children).forEach((d,i)=>d.classList.toggle("active", i===tIndex));
-}
-tPrev?.addEventListener("click", () => { tIndex = Math.max(0, tIndex - 1); updateT(); });
-tNext?.addEventListener("click", () => { tIndex = Math.min(tItems.length - 1, tIndex + 1); updateT(); });
-buildTDots();
-updateT();
-window.addEventListener("resize", updateT);
-
 // Contact form validation + Formspree
 const form = document.getElementById("contactForm");
 const successAlert = document.getElementById("successAlert");
