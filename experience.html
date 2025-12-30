@@ -3,94 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Experience | Rahul Tellapuram</title>
+  <title>Experience | Rahul</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <header class="nav-wrap">
-    <nav class="nav" id="navbar">
-      <a class="brand" href="index.html#home"><span class="brand-dot"></span><span>Rahul</span></a>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-
-      <div class="nav-links" id="navLinks">
-        <a class="active-link" href="experience.html">Experience</a>
+  <header class="header">
+    <nav class="nav container">
+      <a class="brand" href="index.html"><span class="dot"></span><span>Rahul</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+      <div class="links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a class="active" href="experience.html">Experience</a>
         <a href="education.html">Education</a>
         <a href="skills.html">Skills</a>
         <a href="certifications.html">Certifications</a>
-        <a href="index.html#projects">Projects</a>
-        <a class="btn btn-sm" href="index.html#contact">Contact</a>
       </div>
     </nav>
   </header>
 
   <section class="section">
     <div class="container">
-      <div class="section-head reveal">
-        <h2>Experience</h2>
-        <p class="muted">Analytics, automation, and BI reporting experience.</p>
-      </div>
+      <h2>Experience</h2>
+      <p class="muted">Analytics, reporting, and automation experience.</p>
 
-      <div class="timeline">
-        <div class="t-item glass reveal">
-          <div class="t-title">Business Analyst — SVK Information Technologies</div>
-          <div class="t-meta">Hyderabad, India · Sep 2023 – Apr 2024</div>
-          <ul class="t-list">
+      <div class="stack">
+        <div class="card">
+          <h3>Business Analyst — SVK Information Technologies</h3>
+          <p class="muted">Hyderabad, India · Sep 2023 – Apr 2024</p>
+          <ul class="muted">
             <li>Automated financial reporting and reconciliation workflows using Python (Pandas) and Excel.</li>
             <li>Improved reporting accuracy by ~30% through standardized validation and variance checks.</li>
-            <li>Built dashboards and KPI reporting to support decision-making and performance visibility.</li>
+            <li>Built KPI reporting to support decision-making and performance visibility.</li>
           </ul>
         </div>
 
-        <div class="t-item glass reveal">
-          <div class="t-title">Creator Analytics Project (YouTube + Instagram)</div>
-          <div class="t-meta">Analytics Project</div>
-          <ul class="t-list">
-            <li>Collected engagement and audience data from YouTube and Instagram for 10+ creators.</li>
-            <li>Cleaned/transformed views, likes, comments, watch time using Python (Pandas).</li>
-            <li>Built Power BI dashboards (engagement rate, audience, reach) and optimized posting schedules → ~22% engagement lift.</li>
+        <div class="card">
+          <h3>Creator Analytics Project (YouTube + Instagram)</h3>
+          <p class="muted">Analytics Project</p>
+          <ul class="muted">
+            <li>Collected engagement and audience data for 10+ creators.</li>
+            <li>Cleaned and transformed metrics using Python (Pandas).</li>
+            <li>Built BI reporting to support performance decisions and content strategy.</li>
           </ul>
         </div>
 
-        <div class="t-item glass reveal">
-          <div class="t-title">Analyst (Volunteer) — UB Farmstand</div>
-          <div class="t-meta">Buffalo, NY · Volunteering</div>
-          <ul class="t-list">
-            <li>Enhanced donation and inventory tracking by ~40% via automated Excel reports and Power BI dashboards.</li>
-            <li>Reduced data entry errors with standardized tracking and reporting templates.</li>
-            <li>Delivered insights on donation patterns for better forecasting and outreach planning.</li>
+        <div class="card">
+          <h3>Volunteer Analyst — UB Farmstand</h3>
+          <p class="muted">Buffalo, NY · Volunteering</p>
+          <ul class="muted">
+            <li>Improved donation and inventory tracking via reporting templates and dashboards.</li>
+            <li>Reduced data-entry errors with standardized tracking.</li>
           </ul>
         </div>
 
-        <div class="glass card reveal">
-          <a class="btn" href="index.html#projects">See Projects →</a>
-          <a class="btn btn-ghost" href="index.html#contact">Contact Me →</a>
+        <div class="card">
+          <a class="btn" href="index.html#projects">View Projects</a>
         </div>
       </div>
     </div>
   </section>
 
   <footer class="footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <div class="brand"><span class="brand-dot"></span><span>Rahul</span></div>
-        <p class="muted">Data Analyst · Python · SQL · Power BI · Tableau</p>
-      </div>
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <a href="index.html#home">Home</a>
-        <a href="index.html#projects">Projects</a>
-        <a href="index.html#contact">Contact</a>
-      </div>
-      <div class="footer-right">
-        <p class="muted">Made with <span class="heart">♥</span> by Rahul</p>
-      </div>
+    <div class="container foot">
+      <p class="muted">© <span id="year"></span> Rahul Tellapuram</p>
     </div>
   </footer>
 
