@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rahul Tellapuram | Data Analyst</title>
-  <meta name="description" content="Rahul Tellapuram — Data Analyst (Python, SQL, Power BI). Projects: churn prediction, dashboards, forecasting, automation." />
+  <meta name="description" content="Rahul Tellapuram — Data Analyst (Python, SQL, Power BI). Dashboards, automation, analytics projects." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,262 +15,425 @@
 <body>
 
   <!-- NAV -->
-  <header class="header">
-    <nav class="nav container">
-      <a class="brand" href="index.html">
-        <span class="dot"></span>
+  <header class="nav-wrap">
+    <nav class="nav" id="navbar">
+      <a class="brand" href="#home">
+        <span class="brand-dot"></span>
         <span>Rahul</span>
       </a>
 
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
 
-      <div class="links" id="navLinks">
-        <a href="experience.html">Experience</a>
-        <a href="education.html">Education</a>
-        <a href="skills.html">Skills</a>
-        <a href="certifications.html">Certifications</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
         <a href="#projects">Projects</a>
-        <a class="btn" href="#contact">Contact</a>
+        <a class="btn btn-sm" href="#contact">Contact</a>
       </div>
     </nav>
   </header>
 
   <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-bg"></div>
-
+  <main id="home" class="section hero">
     <div class="container hero-grid">
-      <div class="hero-text">
-        <p class="pill">Open to Data Analyst / Analytics roles (OPT)</p>
+      <div class="hero-left reveal">
+        <div class="pill"><span class="pulse"></span> Open to Data Analyst / Analytics roles (OPT)</div>
 
-        <h1>Hi, I’m Rahul<br><span class="grad">Data Analyst</span></h1>
+        <h1>Hi, I’m <span class="grad">Rahul</span><br><span class="muted">Data Analyst</span></h1>
 
         <p class="lead">
-          I build dashboards, automate reporting, and turn messy data into clear insights.
-          Strong in <b>Python</b>, <b>SQL</b>, <b>Power BI</b>, <b>Tableau</b>, and <b>Excel</b>.
+          End-to-End Data Analysis | Empowering Data-Driven Strategy through Automation & Precision BI.
+          I build reliable reporting systems and executive-ready dashboards — from clean data models to high-impact visual storytelling.
         </p>
 
-        <div class="hero-actions">
+        <div class="hero-cta">
           <a class="btn" href="#projects">View Projects</a>
-          <a class="btn ghost" href="mailto:rahulelhan@gmail.com">Email Me</a>
+          <a class="btn btn-ghost" href="#contact">Hire / Collaborate</a>
         </div>
 
-        <div class="quick">
-          <a target="_blank" rel="noreferrer" href="https://github.com/Rahul-data-7">GitHub</a>
-          <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/rahul-07t077777/">LinkedIn</a>
-          <a href="mailto:rahulelhan@gmail.com">rahulelhan@gmail.com</a>
+        <div class="stats">
+          <div class="stat glass">
+            <div class="stat-num">30%</div><div class="stat-label">Accuracy improvement</div>
+          </div>
+          <div class="stat glass">
+            <div class="stat-num">22%</div><div class="stat-label">Engagement lift</div>
+          </div>
+          <div class="stat glass">
+            <div class="stat-num">40%</div><div class="stat-label">Tracking improvement</div>
+          </div>
+        </div>
+
+        <div class="hero-links">
+          <a class="chip-link" target="_blank" rel="noreferrer" href="https://github.com/Rahul-data-7">GitHub</a>
+          <a class="chip-link" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/rahul-07t077777/">LinkedIn</a>
+          <a class="chip-link" href="mailto:rahulelhan@gmail.com">Email</a>
         </div>
       </div>
 
-      <div class="hero-card">
-        <img class="profile" src="assets/profile.png" alt="Rahul profile photo">
-        <div class="mini">
-          <div><span class="k">Location</span><span class="v">New York, USA</span></div>
-          <div><span class="k">Phone</span><span class="v">(716) 748-1871</span></div>
-          <div><span class="k">GitHub</span><a class="v link" target="_blank" rel="noreferrer" href="https://github.com/Rahul-data-7">Rahul-data-7</a></div>
-          <div><span class="k">LinkedIn</span><a class="v link" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/rahul-07t077777/">rahul-07t077777</a></div>
+      <div class="hero-right reveal">
+        <div class="portrait-card">
+          <div class="gradient-frame">
+            <img src="assets/profile.png" class="portrait" alt="Rahul profile" />
+          </div>
+
+          <div class="hero-mini glass">
+            <div class="mini-row"><span class="mini-k">Location</span><span class="mini-v">New York, USA</span></div>
+            <div class="mini-row"><span class="mini-k">Email</span><a class="mini-v link" href="mailto:rahulelhan@gmail.com">rahulelhan@gmail.com</a></div>
+            <div class="mini-row"><span class="mini-k">Phone</span><span class="mini-v">(716) 748-1871</span></div>
+            <div class="mini-row"><span class="mini-k">GitHub</span><a class="mini-v link" target="_blank" rel="noreferrer" href="https://github.com/Rahul-data-7">Rahul-data-7</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class="scroll-indicator" href="#experience" aria-label="Scroll down">
+      <span class="mouse"></span><span class="scroll-text">Scroll</span>
+    </a>
+  </main>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Experience</h2>
+        <p class="muted">Analytics, reporting automation, dashboards.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="glass card reveal">
+          <h3>Business Analyst — SVK Information Technologies</h3>
+          <p class="muted">Hyderabad, India · Sep 2023 – Apr 2024</p>
+          <ul class="list">
+            <li>Automated financial reporting & reconciliation using Python (Pandas) and Excel.</li>
+            <li>Improved reporting accuracy by ~30% with validation and variance checks.</li>
+            <li>Built KPI dashboards for decision-making and performance visibility.</li>
+          </ul>
+        </div>
+
+        <div class="glass card reveal">
+          <h3>Volunteer Analyst — UB Farmstand</h3>
+          <p class="muted">Buffalo, NY · Volunteering</p>
+          <ul class="list">
+            <li>Improved donation & inventory tracking by ~40% via reporting templates and BI dashboards.</li>
+            <li>Reduced manual errors through standardization and automation.</li>
+            <li>Delivered weekly insights for forecasting and outreach planning.</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="section" id="about">
+  <!-- EDUCATION -->
+  <section id="education" class="section">
     <div class="container">
-      <h2>About</h2>
-      <p class="muted">
-        I’m a data analyst with experience in reporting automation, BI dashboards, and analytics projects.
-        I focus on clean datasets, trusted KPIs, and dashboards stakeholders can use immediately.
-      </p>
+      <div class="section-head reveal">
+        <h2>Education</h2>
+        <p class="muted">Academic background in analytics and business.</p>
+      </div>
 
-      <div class="cards">
-        <div class="card">
-          <h3>Dashboards</h3>
-          <p class="muted">Power BI/Tableau dashboards with KPIs, drilldowns, and trends.</p>
+      <div class="grid-2">
+        <div class="glass card reveal">
+          <h3>University at Buffalo, SUNY</h3>
+          <p class="muted">MS — Management Science & Business Analytics</p>
+          <p class="muted">GPA: 3.75/4.0 · Jun 2025</p>
+          <div class="badges">
+            <span class="badge">Analytics</span><span class="badge">Data Modeling</span><span class="badge">Decisioning</span>
+          </div>
         </div>
-        <div class="card">
-          <h3>SQL + Modeling</h3>
-          <p class="muted">Joins, aggregations, data validation, and reusable datasets.</p>
-        </div>
-        <div class="card">
-          <h3>Automation</h3>
-          <p class="muted">Python + Excel workflows to reduce manual work and improve accuracy.</p>
+
+        <div class="glass card reveal">
+          <h3>Vivek Vardhini College, Osmania University</h3>
+          <p class="muted">Bachelor of Commerce — Computer Application</p>
+          <p class="muted">First Class with Distinction · Aug 2023</p>
+          <div class="badges">
+            <span class="badge">Business</span><span class="badge">Computing</span><span class="badge">Foundations</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS (simple grid) -->
-  <section class="section" id="projects">
+  <!-- SKILLS -->
+  <section id="skills" class="section">
     <div class="container">
-      <h2>Projects</h2>
-      <p class="muted">Strong, recruiter-friendly projects (problem → approach → tools → result).</p>
-
-      <div class="projects-grid">
-
-        <!-- 1 -->
-        <article class="project">
-          <div class="top">
-            <h3>Customer Churn Prediction (End-to-End)</h3>
-            <span class="tag">ML</span>
-          </div>
-          <p class="muted">
-            <b>Problem:</b> identify customers likely to churn early.<br>
-            <b>Approach:</b> EDA → feature engineering → model training → evaluation → business actions.<br>
-            <b>Tools:</b> Python, Pandas, scikit-learn, Matplotlib.
-          </p>
-          <div class="actions">
-            <a class="btn sm" target="_blank" rel="noreferrer" href="https://github.com/Rahul-data-7/churn-prediction">View Repo</a>
-          </div>
-        </article>
-
-        <!-- 2 -->
-        <article class="project">
-          <div class="top">
-            <h3>Sales Analytics Dashboard (Power BI)</h3>
-            <span class="tag">BI</span>
-          </div>
-          <p class="muted">
-            <b>Problem:</b> no clear KPI visibility for sales performance.<br>
-            <b>Approach:</b> KPI definitions + cleaned dataset + dashboard with drilldowns and trends.<br>
-            <b>Tools:</b> Power BI, SQL/Excel.
-          </p>
-          <div class="actions">
-            <a class="btn sm" target="_blank" rel="noreferrer" href="https://github.com/Rahul-data-7/sales-dashboard-powerbi">View Repo</a>
-          </div>
-        </article>
-
-        <!-- 3 -->
-        <article class="project">
-          <div class="top">
-            <h3>Time Series Forecasting (Demand / Sales)</h3>
-            <span class="tag">Analytics</span>
-          </div>
-          <p class="muted">
-            <b>Problem:</b> forecast demand to reduce stockouts and overstock.<br>
-            <b>Approach:</b> stationarity checks → baseline → forecasting model → evaluation.<br>
-            <b>Tools:</b> Python, Pandas, statsmodels.
-          </p>
-          <div class="actions">
-            <a class="btn sm" target="_blank" rel="noreferrer" href="https://github.com/Rahul-data-7/time-series-forecasting">View Repo</a>
-          </div>
-        </article>
-
-        <!-- 4 -->
-        <article class="project">
-          <div class="top">
-            <h3>Financial Reconciliation Automation</h3>
-            <span class="tag">Automation</span>
-          </div>
-          <p class="muted">
-            <b>Problem:</b> reconciliation was manual and error-prone.<br>
-            <b>Approach:</b> automated cleaning + matching + variance checks + report export.<br>
-            <b>Tools:</b> Python, Excel (optional VBA).
-          </p>
-          <div class="actions">
-            <a class="btn sm" target="_blank" rel="noreferrer" href="https://github.com/Rahul-data-7/reconciliation-automation">View Repo</a>
-          </div>
-        </article>
-
-        <!-- 5 -->
-        <article class="project">
-          <div class="top">
-            <h3>SQL Analytics Case Study (Cohorts + KPIs)</h3>
-            <span class="tag">SQL</span>
-          </div>
-          <p class="muted">
-            <b>Problem:</b> answer real business questions using SQL only.<br>
-            <b>Approach:</b> cohort analysis, funnels, retention, revenue KPIs.<br>
-            <b>Tools:</b> SQL (MySQL/Postgres).
-          </p>
-          <div class="actions">
-            <a class="btn sm" target="_blank" rel="noreferrer" href="https://github.com/Rahul-data-7/sql-case-study">View Repo</a>
-          </div>
-        </article>
-
+      <div class="section-head reveal">
+        <h2>Skills</h2>
+        <p class="muted">Organized tech stack with proficiency bars.</p>
       </div>
 
-      <p class="muted small">
-        Note: If any repo link doesn’t exist yet, create a GitHub repo with that name and push your code + README + screenshots.
-      </p>
+      <div class="skills-grid">
+        <div class="glass card reveal">
+          <h3>Core</h3>
+
+          <div class="skill">
+            <div class="skill-top"><span>Python (Pandas, NumPy)</span><span class="level expert">Expert</span></div>
+            <div class="bar"><span style="width:90%"></span></div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-top"><span>SQL (MySQL)</span><span class="level advanced">Advanced</span></div>
+            <div class="bar"><span style="width:85%"></span></div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-top"><span>Power BI</span><span class="level advanced">Advanced</span></div>
+            <div class="bar"><span style="width:80%"></span></div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-top"><span>Tableau</span><span class="level intermediate">Intermediate</span></div>
+            <div class="bar"><span style="width:70%"></span></div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-top"><span>Excel (Pivot, VBA)</span><span class="level advanced">Advanced</span></div>
+            <div class="bar"><span style="width:78%"></span></div>
+          </div>
+        </div>
+
+        <div class="glass card reveal">
+          <h3>Analytics & Tools</h3>
+          <div class="chips">
+            <span class="chip">ETL</span><span class="chip">KPI Design</span><span class="chip">Automation</span>
+            <span class="chip">Data Modeling</span><span class="chip">EDA</span><span class="chip">Forecasting</span>
+            <span class="chip">Google Analytics</span><span class="chip">Looker Studio</span>
+          </div>
+
+          <div class="note">
+            <b>Strength:</b> turning business questions into clean datasets + trusted metrics + dashboards.
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS (simple) -->
-  <section class="section" id="testimonials">
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="section">
     <div class="container">
-      <h2>Testimonials</h2>
-
-      <div class="cards">
-        <div class="card">
-          <h3>Rebekah Leith</h3>
-          <p class="muted">
-            “Rahul is one of the best employees I’ve worked with — proactive, reliable, and very strong with data.
-            His reporting automation and dashboards made our process faster and more accurate.”
-          </p>
-        </div>
-        <div class="card">
-          <h3>Leah</h3>
-          <p class="muted">
-            “Rahul communicates clearly, asks the right questions, and delivers dashboards stakeholders can understand.
-            He’s consistent and always improves the workflow.”
-          </p>
-        </div>
+      <div class="section-head reveal">
+        <h2>Certifications</h2>
+        <p class="muted">Add your official certificates here.</p>
       </div>
+
+      <div class="grid-3">
+        <div class="glass card reveal"><h3>Power BI</h3><p class="muted">Data modeling, DAX, dashboards</p></div>
+        <div class="glass card reveal"><h3>Tableau</h3><p class="muted">Visual analytics & storytelling</p></div>
+        <div class="glass card reveal"><h3>Python for Data</h3><p class="muted">Pandas, EDA, automation</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS (carousel + filters + dots) -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Projects</h2>
+        <p class="muted">Interactive carousel with category filters and metrics.</p>
+      </div>
+
+      <div class="filters reveal">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="ml">ML</button>
+        <button class="filter" data-filter="bi">BI</button>
+        <button class="filter" data-filter="sql">SQL</button>
+        <button class="filter" data-filter="automation">Automation</button>
+      </div>
+
+      <div class="carousel reveal">
+        <button class="car-btn" id="prevBtn">‹</button>
+
+        <div class="car-viewport">
+          <div class="car-track" id="projectTrack">
+
+            <article class="proj glass" data-tags="ml">
+              <div class="proj-top"><h3>Customer Churn Prediction</h3><span class="chip">ML</span></div>
+              <p class="muted"><b>Problem:</b> predict churn early.<br><b>How:</b> EDA → feature engineering → model training → evaluation → actions.<br><b>Tools:</b> Python, scikit-learn.</p>
+              <div class="metrics"><div class="m"><span class="m-k">Output</span><span class="m-v">Risk list</span></div><div class="m"><span class="m-k">Focus</span><span class="m-v">Retention</span></div><div class="m"><span class="m-k">Type</span><span class="m-v">E2E</span></div></div>
+              <div class="proj-actions">
+                <a class="btn btn-sm" target="_blank" rel="noreferrer" href="https://github.com/Rahul-data-7/churn-prediction">View Repo</a>
+              </div>
+            </article>
+
+            <article class="proj glass" data-tags="bi">
+              <div class="proj-top"><h3>Sales KPI Dashboard</h3><span class="chip">BI</span></div>
+              <p class="muted"><b>Problem:</b> no KPI visibility.<br><b>How:</b> KPI model + dashboard drilldowns.<br><b>Tools:</b> Power BI, SQL.</p>
+              <div class="metrics"><div class="m"><span class="m-k">KPIs</span><span class="m-v">12+</span></div><div class="m"><span class="m-k">Use</span><span class="m-v">Exec view</span></div><div class="m"><span class="m-k">Type</span><span class="m-v">BI</span></div></div>
+              <div class="proj-actions">
+                <a class="btn btn-sm" target="_blank" rel="noreferrer" href="https://github.com/Rahul-data-7/sales-dashboard-powerbi">View Repo</a>
+              </div>
+            </article>
+
+            <article class="proj glass" data-tags="sql">
+              <div class="proj-top"><h3>SQL Case Study (Cohorts + Retention)</h3><span class="chip">SQL</span></div>
+              <p class="muted"><b>Problem:</b> answer real questions using SQL only.<br><b>How:</b> funnels, cohorts, retention, KPI tables.<br><b>Tools:</b> SQL.</p>
+              <div class="metrics"><div class="m"><span class="m-k">Focus</span><span class="m-v">KPIs</span></div><div class="m"><span class="m-k">Method</span><span class="m-v">Cohorts</span></div><div class="m"><span class="m-k">Type</span><span class="m-v">SQL</span></div></div>
+              <div class="proj-actions">
+                <a class="btn btn-sm" target="_blank" rel="noreferrer" href="https://github.com/Rahul-data-7/sql-case-study">View Repo</a>
+              </div>
+            </article>
+
+            <article class="proj glass" data-tags="automation">
+              <div class="proj-top"><h3>Financial Reconciliation Automation</h3><span class="chip">Automation</span></div>
+              <p class="muted"><b>Problem:</b> manual reconciliation errors.<br><b>How:</b> clean + match + variances + output report.<br><b>Tools:</b> Python, Excel.</p>
+              <div class="metrics"><div class="m"><span class="m-k">Impact</span><span class="m-v">Faster</span></div><div class="m"><span class="m-k">Quality</span><span class="m-v">Checks</span></div><div class="m"><span class="m-k">Type</span><span class="m-v">Auto</span></div></div>
+              <div class="proj-actions">
+                <a class="btn btn-sm" target="_blank" rel="noreferrer" href="https://github.com/Rahul-data-7/reconciliation-automation">View Repo</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <button class="car-btn" id="nextBtn">›</button>
+      </div>
+
+      <div class="dots reveal" id="dots"></div>
+    </div>
+  </section>
+
+  <!-- SERVICES (bento) -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Services</h2>
+        <p class="muted">Bento grid with glow hover effects.</p>
+      </div>
+
+      <div class="bento">
+        <div class="bento-item glass glow reveal"><h3>Dashboards & BI</h3><p class="muted">Power BI/Tableau KPI dashboards.</p></div>
+        <div class="bento-item glass glow reveal"><h3>SQL Analytics</h3><p class="muted">Queries, cohorts, funnels, retention.</p></div>
+        <div class="bento-item glass glow reveal"><h3>Automation</h3><p class="muted">Python + Excel automated reports.</p></div>
+        <div class="bento-item glass glow reveal"><h3>ETL & Quality</h3><p class="muted">Clean data + validation checks.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS (carousel) -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Testimonials</h2>
+        <p class="muted">Carousel + grayscale-to-color photo effect.</p>
+      </div>
+
+      <div class="testimonials reveal">
+        <button class="car-btn" id="tPrev">‹</button>
+
+        <div class="t-viewport glass">
+          <div class="t-track" id="tTrack">
+            <figure class="t-item">
+              <div class="t-head">
+                <img class="t-photo" src="assets/profile.png" alt="testimonial" />
+                <div><div class="t-name">Rebekah Leith</div><div class="t-role muted">Manager</div></div>
+                <div class="stars">★★★★★</div>
+              </div>
+              <blockquote>
+                Rahul is one of the best employees I’ve worked with — proactive, reliable, and very strong with data.
+                His reporting automation and dashboards made our process faster and more accurate.
+              </blockquote>
+            </figure>
+
+            <figure class="t-item">
+              <div class="t-head">
+                <img class="t-photo" src="assets/profile.png" alt="testimonial" />
+                <div><div class="t-name">Leah</div><div class="t-role muted">Team Member</div></div>
+                <div class="stars">★★★★★</div>
+              </div>
+              <blockquote>
+                Rahul communicates clearly, asks the right questions, and delivers dashboards stakeholders can understand.
+                He’s consistent and always improves the workflow.
+              </blockquote>
+            </figure>
+          </div>
+        </div>
+
+        <button class="car-btn" id="tNext">›</button>
+      </div>
+
+      <div class="dots reveal" id="tDots"></div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section class="section" id="contact">
+  <section id="contact" class="section">
     <div class="container">
-      <h2>Contact</h2>
-      <p class="muted">This form sends directly to my email via Formspree.</p>
+      <div class="section-head reveal">
+        <h2>Contact</h2>
+        <p class="muted">Functional form with validation + alerts (Formspree).</p>
+      </div>
 
       <div class="contact-grid">
-        <form class="card form" id="contactForm" action="https://formspree.io/f/xdaopnwq" method="POST">
+        <form class="glass form reveal" id="contactForm"
+              action="https://formspree.io/f/xdaopnwq" method="POST">
           <div class="field">
-            <label>Name</label>
-            <input name="name" id="name" placeholder="Your name" required>
-            <small class="err" data-for="name"></small>
+            <label for="name">Name</label>
+            <input id="name" name="name" required placeholder="Your name" />
+            <small class="error" data-for="name"></small>
           </div>
 
           <div class="field">
-            <label>Email</label>
-            <input name="email" id="email" type="email" placeholder="you@email.com" required>
-            <small class="err" data-for="email"></small>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@email.com" />
+            <small class="error" data-for="email"></small>
           </div>
 
           <div class="field">
-            <label>Message</label>
-            <textarea name="message" id="message" rows="5" placeholder="Tell me what you need..." required></textarea>
-            <small class="err" data-for="message"></small>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell me what you need..."></textarea>
+            <small class="error" data-for="message"></small>
           </div>
 
-          <button class="btn" type="submit">Send Message</button>
+          <button class="btn btn-submit" type="submit">Send Message</button>
 
           <div class="alert success" id="successAlert">✅ Message sent successfully!</div>
           <div class="alert error" id="errorAlert">❌ Something went wrong. Please try again.</div>
         </form>
 
-        <div class="card">
+        <div class="glass info-card reveal">
           <h3>Info</h3>
           <p class="muted"><b>Email:</b> <a class="link" href="mailto:rahulelhan@gmail.com">rahulelhan@gmail.com</a></p>
           <p class="muted"><b>Phone:</b> (716) 748-1871</p>
           <p class="muted"><b>Location:</b> New York, USA</p>
-
           <hr class="sep">
-
-          <h3>Social</h3>
-          <p><a class="link" target="_blank" rel="noreferrer" href="https://github.com/Rahul-data-7">GitHub</a></p>
-          <p><a class="link" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/rahul-07t077777/">LinkedIn</a></p>
+          <div class="social">
+            <a class="social-btn" target="_blank" rel="noreferrer" href="https://github.com/Rahul-data-7">GitHub</a>
+            <a class="social-btn" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/rahul-07t077777/">LinkedIn</a>
+            <a class="social-btn" href="mailto:rahulelhan@gmail.com">Email</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="container foot">
-      <p class="muted">© <span id="year"></span> Rahul Tellapuram · Data Analyst</p>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand"><span class="brand-dot"></span><span>Rahul</span></div>
+        <p class="muted">Data Analyst · Python · SQL · Power BI · Tableau</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Social</h4>
+        <a target="_blank" rel="noreferrer" href="https://github.com/Rahul-data-7">GitHub</a>
+        <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/rahul-07t077777/">LinkedIn</a>
+      </div>
+
+      <div class="footer-right">
+        <p class="muted">Made with <span class="heart">♥</span> by Rahul</p>
+      </div>
     </div>
   </footer>
 
