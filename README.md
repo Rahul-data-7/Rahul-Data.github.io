@@ -1,118 +1,103 @@
-# 📊 Rahul Tellapuram — Data Analyst & Business Analytics
+# Rahul Tellapuram — Data Analyst Portfolio
 
-🚀 **Data Analyst | Business Analytics | Dashboard & Insights Specialist**  
-📍 United States | Open to Full-Time, Contract, and Internship Roles
-
----
-
-## 👋 About Me
-
-I am a **Data Analyst and Business Analytics graduate** with hands-on experience transforming raw data into actionable business insights.  
-My work focuses on **data cleaning, analysis, visualization, and KPI reporting** using modern analytics tools.
-
-I enjoy building **clean dashboards**, writing **efficient SQL queries**, and creating **data-driven stories** that help teams make better decisions.
+Live Portfolio (GitHub Pages): *(enable in Settings → Pages)*  
+GitHub: https://github.com/Rahul-data-7  
+LinkedIn: https://www.linkedin.com/in/rahul-07t077777/  
+Email: rahulelhan@gmail.com
 
 ---
 
-## 🧠 Core Skills & Tools
-
-### 🔹 Programming & Analytics
-- **Python** (Pandas, NumPy, Data Cleaning, EDA)
-- **SQL** (Joins, Aggregations, KPI Queries, Reporting)
-- **R Studio** (Basic statistical analysis)
-
-### 🔹 Data Visualization & BI
-- **Power BI** (Interactive dashboards, KPI tracking)
-- **Tableau** (Exploratory visualizations)
-- **Excel** (Advanced formulas, Pivot Tables, Reporting)
-
-### 🔹 Analytics Concepts
-- Data Cleaning & Preparation  
-- Data Modeling  
-- KPI & Metrics Design  
-- Business & Financial Analysis  
-- Dashboard Storytelling  
+## Overview
+This is my personal portfolio website for Data Analyst / Analytics roles.  
+It showcases projects, dashboards, automation work, and how I approach analytics problems end-to-end.
 
 ---
 
-## 💼 Experience
-
-### Business Analyst Intern  
-**SVK | 2023 – 2024**
-
-- Analyzed business and financial datasets using **SQL and Excel** to support decision-making.
-- Built **Power BI dashboards** to track KPIs and operational performance.
-- Automated recurring reports using **Python**, reducing manual effort.
-- Collaborated with stakeholders to translate business needs into data insights.
+## Built With
+- HTML + CSS (glassmorphism UI)
+- JavaScript (animations, carousels, filtering, form submission)
+- Formspree (contact form delivery)
 
 ---
 
-## 📂 Projects
-
-### 🔹 Retail Sales Analytics *(In Progress)*
-- Analyzed sales trends, seasonality, and top-performing products.
-- Built KPI dashboards using **Python, SQL, and Power BI**.
-- Focused on business-driven insights and reporting clarity.
-
-### 🔹 Financial KPI Dashboard *(Planned)*
-- Designed variance and performance dashboards.  
-- Tools: **Excel, Power BI, SQL**
-
-### 🔹 Automated Reporting Pipeline *(Planned)*
-- Automated data cleaning and report generation.  
-- Tools: **Python, Excel**
-
-👉 *Detailed skill usage and proficiency can be found on the Skills page of my portfolio.*
+## Key Features
+- Animated Navigation Bar (glassmorphism + blur on scroll)
+- Hero Section (animated gradient border + stats + scroll indicator)
+- Scroll Reveal Animations (fade-in on view)
+- Projects Carousel (with category filters + dots navigation)
+- Bento-style Services Section (hover glow)
+- Testimonials Carousel (grayscale-to-color photo hover)
+- Contact Form (validation + success/error alerts + Formspree submission)
+- Social Media Links (GitHub + LinkedIn)
 
 ---
 
-## 🎓 Education
+## Projects (Recruiter-Friendly)
+Each project includes: problem, approach, tools, and results.
 
-**MS in Management Science & Business Analytics**  
-**University at Buffalo, SUNY**  
-📊 GPA: **3.75 / 4.0**
+### 1) Cross-Platform Engagement Insights Dashboard
+**Repo:** https://github.com/Rahul-data-7/cross-platform-engagement-dashboard  
+**Problem:** No consistent view of creator performance across platforms.  
+**How it works:**  
+- Pull YouTube + Instagram data (API / exports)  
+- Clean and transform with Python (Pandas)  
+- Build KPIs and drilldowns in Power BI  
+**Tools:** Python, Pandas, Power BI  
+**Outcome:** Posting decisions improved → ~22% engagement lift
 
-**Relevant Coursework**
-- Data Analytics
-- SQL & Databases
-- Business Intelligence
-- Statistics
-- Data Visualization
+### 2) Financial Reconciliation Automation
+**Repo:** https://github.com/Rahul-data-7/financial-reconciliation-automation  
+**Problem:** Manual reconciliation was time-consuming and error-prone.  
+**How it works:**  
+- Clean and standardize input data  
+- Match records and compute variances  
+- Export formatted reporting outputs  
+**Tools:** Python, Pandas, Excel VBA  
+**Outcome:** Improved reporting accuracy by ~30%
+
+### 3) Sales KPI Executive Dashboard
+**Repo:** https://github.com/Rahul-data-7/sales-kpi-dashboard  
+**Problem:** KPI reporting lacked standard definitions and visibility.  
+**How it works:**  
+- Define metric logic + build SQL queries  
+- Create Power BI dashboard with drilldowns  
+**Tools:** SQL, Power BI  
+**Outcome:** Faster reporting + clearer KPI tracking
+
+### 4) Customer Churn Prediction (End-to-End)
+**Repo:** https://github.com/Rahul-data-7/churn-prediction-end-to-end  
+**Problem:** Identify high-risk customers early to reduce churn.  
+**How it works:**  
+- EDA → feature engineering → modeling → evaluation  
+- Translate model drivers into retention actions  
+**Tools:** Python, ML, Evaluation metrics  
+**Outcome:** Actionable churn drivers + recommendations
+
+### 5) Inventory & Donations Analytics (Volunteer)
+**Repo:** https://github.com/Rahul-data-7/inventory-donation-analytics  
+**Problem:** Tracking and forecasting were inconsistent.  
+**How it works:**  
+- Standardized Excel tracking  
+- Built Power BI dashboard for trends and inventory health  
+**Tools:** Excel, Power BI  
+**Outcome:** Improved tracking by ~40% and reduced errors
 
 ---
 
-## 🌐 Portfolio Website
-
-🔗 **Live Portfolio:**  
-👉 *(Add your GitHub Pages link here once live)*
-
-My portfolio includes:
-- Glassmorphism UI design
-- Skill-to-project mapping
-- Recruiter-friendly layout
-- Clean navigation across pages
+## How to Run Locally
+1. Download this repo
+2. Open `index.html` in your browser
 
 ---
 
-## 📬 Contact
-
-- 📧 Email: **rahulelhan@gmail.com**
-- 💼 LinkedIn: *(Add your link here)*
-- 💻 GitHub: **https://github.com/Rahul-data-7**
-
----
-
-## ⭐ Why This Repository Matters
-
-This repository represents:
-- My **analytics skillset**
-- My **portfolio website**
-- My commitment to **clean code and clarity**
-- My ability to build **data-driven solutions**
+## Deploy on GitHub Pages
+1. Go to **Settings → Pages**
+2. Under **Build and deployment**, choose:
+   - Source: **Deploy from a branch**
+   - Branch: **main** (root)
+3. Save → your site will be live
 
 ---
 
-### ✅ For Recruiters / Hiring Managers
-
-Feel free to explore the website and projects.  
-I’m open to opportunities in **Data Analytics, Business Intelligence, and Business Analytics**.
+## Contact
+Use the website contact form (Formspree) or email me at: **rahulelhan@gmail.com**
