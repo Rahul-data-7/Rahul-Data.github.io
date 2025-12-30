@@ -1,4 +1,6 @@
 # Rahul Tellapuram — Data Analyst Portfolio
+![assetshero-bg png](https://github.com/user-attachments/assets/e57149d8-656c-4c13-bcca-6dc1989d28e0)
+
 
 Live Portfolio (GitHub Pages): *(enable in Settings → Pages)*  
 GitHub: https://github.com/Rahul-data-7  
