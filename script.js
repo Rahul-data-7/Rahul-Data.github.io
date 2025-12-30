@@ -1,93 +1,201 @@
-(function () {
-  // ===== Mobile menu =====
-  const openBtn = document.getElementById("openMenu");
-  const closeBtn = document.getElementById("closeMenu");
-  const menu = document.getElementById("mobileMenu");
+// ===== Navbar blur on scroll =====
+const navbar = document.getElementById("navbar");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 12) navbar?.classList.add("scrolled");
+  else navbar?.classList.remove("scrolled");
+});
 
-  if (openBtn && closeBtn && menu) {
-    function openMenu() {
-      menu.classList.add("open");
-      menu.setAttribute("aria-hidden", "false");
-      openBtn.setAttribute("aria-expanded", "true");
-      document.body.style.overflow = "hidden";
+// ===== Mobile menu =====
+const navToggle = document.getElementById("navToggle");
+const navLinks = document.getElementById("navLinks");
+
+navToggle?.addEventListener("click", () => {
+  const open = navLinks.classList.toggle("open");
+  navToggle.setAttribute("aria-expanded", String(open));
+});
+
+document.querySelectorAll(".nav-links a").forEach(a => {
+  a.addEventListener("click", () => {
+    navLinks?.classList.remove("open");
+    navToggle?.setAttribute("aria-expanded", "false");
+  });
+});
+
+// ===== Scroll reveal =====
+const revealEls = document.querySelectorAll(".reveal");
+const io = new IntersectionObserver(
+  entries => entries.forEach(e => e.isIntersecting && e.target.classList.add("show")),
+  { threshold: 0.15 }
+);
+revealEls.forEach(el => io.observe(el));
+
+// ===== Projects filter + carousel =====
+const filters = document.querySelectorAll(".filter");
+const track = document.getElementById("projectTrack");
+const dotsWrap = document.getElementById("dots");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+let cards = track ? Array.from(track.querySelectorAll(".proj")) : [];
+let activeFilter = "all";
+let index = 0;
+
+function getVisibleCards() {
+  return cards.filter(card => {
+    if (activeFilter === "all") return true;
+    const tags = (card.dataset.tags || "").split(" ");
+    return tags.includes(activeFilter);
+  });
+}
+
+function rebuildDots() {
+  if (!dotsWrap) return;
+  dotsWrap.innerHTML = "";
+  const vis = getVisibleCards();
+  vis.forEach((_, i) => {
+    const d = document.createElement("button");
+    d.className = "dot" + (i === index ? " active" : "");
+    d.setAttribute("aria-label", `Go to project ${i + 1}`);
+    d.addEventListener("click", () => {
+      index = i;
+      updateCarousel();
+    });
+    dotsWrap.appendChild(d);
+  });
+}
+
+function updateCarousel() {
+  if (!track) return;
+
+  const vis = getVisibleCards();
+  cards.forEach(c => (c.style.display = "none"));
+  vis.forEach(c => (c.style.display = "block"));
+
+  if (vis.length === 0) return;
+
+  if (index < 0) index = 0;
+  if (index > vis.length - 1) index = vis.length - 1;
+
+  const gap = 12;
+  const cardWidth = vis[0].getBoundingClientRect().width;
+  const offset = (cardWidth + gap) * index;
+
+  track.style.transform = `translateX(${-offset}px)`;
+
+  if (dotsWrap) {
+    Array.from(dotsWrap.children).forEach((d, i) => d.classList.toggle("active", i === index));
+  }
+}
+
+prevBtn?.addEventListener("click", () => { index -= 1; updateCarousel(); });
+nextBtn?.addEventListener("click", () => { index += 1; updateCarousel(); });
+
+filters.forEach(btn => {
+  btn.addEventListener("click", () => {
+    filters.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    activeFilter = btn.dataset.filter;
+    index = 0;
+    rebuildDots();
+    updateCarousel();
+  });
+});
+
+rebuildDots();
+updateCarousel();
+window.addEventListener("resize", updateCarousel);
+
+// ===== Testimonials carousel =====
+const tTrack = document.getElementById("tTrack");
+const tDots = document.getElementById("tDots");
+const tPrev = document.getElementById("tPrev");
+const tNext = document.getElementById("tNext");
+const tItems = tTrack ? Array.from(tTrack.querySelectorAll(".t-item")) : [];
+let tIndex = 0;
+
+function buildTDots() {
+  if (!tDots) return;
+  tDots.innerHTML = "";
+  tItems.forEach((_, i) => {
+    const d = document.createElement("button");
+    d.className = "dot" + (i === tIndex ? " active" : "");
+    d.addEventListener("click", () => { tIndex = i; updateT(); });
+    tDots.appendChild(d);
+  });
+}
+
+function updateT() {
+  if (!tTrack || tItems.length === 0) return;
+  const gap = 12;
+  const w = tItems[0].getBoundingClientRect().width;
+  const offset = (w + gap) * tIndex;
+  tTrack.style.transform = `translateX(${-offset}px)`;
+  if (tDots) Array.from(tDots.children).forEach((d, i) => d.classList.toggle("active", i === tIndex));
+}
+
+tPrev?.addEventListener("click", () => { tIndex = Math.max(0, tIndex - 1); updateT(); });
+tNext?.addEventListener("click", () => { tIndex = Math.min(tItems.length - 1, tIndex + 1); updateT(); });
+
+buildTDots();
+updateT();
+window.addEventListener("resize", updateT);
+
+// ===== Contact form (Formspree) =====
+const form = document.getElementById("contactForm");
+const successAlert = document.getElementById("successAlert");
+const errorAlert = document.getElementById("errorAlert");
+
+function setError(id, msg) {
+  const el = document.querySelector(`.error[data-for="${id}"]`);
+  if (el) el.textContent = msg || "";
+}
+
+function validate() {
+  let ok = true;
+  const name = document.getElementById("name")?.value.trim();
+  const email = document.getElementById("email")?.value.trim();
+  const message = document.getElementById("message")?.value.trim();
+
+  setError("name", "");
+  setError("email", "");
+  setError("message", "");
+
+  if (!name || name.length < 2) { setError("name", "Please enter your name."); ok = false; }
+  if (!email || !/^\S+@\S+\.\S+$/.test(email)) { setError("email", "Please enter a valid email."); ok = false; }
+  if (!message || message.length < 10) { setError("message", "Message should be at least 10 characters."); ok = false; }
+
+  return ok;
+}
+
+form?.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  successAlert && (successAlert.style.display = "none");
+  errorAlert && (errorAlert.style.display = "none");
+
+  if (!validate()) {
+    if (errorAlert) {
+      errorAlert.textContent = "❌ Please fix the errors above and try again.";
+      errorAlert.style.display = "block";
     }
+    return;
+  }
 
-    function closeMenu() {
-      menu.classList.remove("open");
-      menu.setAttribute("aria-hidden", "true");
-      openBtn.setAttribute("aria-expanded", "false");
-      document.body.style.overflow = "";
+  try {
+    const data = new FormData(form);
+    const res = await fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: { "Accept": "application/json" }
+    });
+
+    if (!res.ok) throw new Error("Formspree error");
+
+    if (successAlert) successAlert.style.display = "block";
+    form.reset();
+  } catch (err) {
+    if (errorAlert) {
+      errorAlert.textContent = "❌ Something went wrong. Please try again.";
+      errorAlert.style.display = "block";
     }
-
-    openBtn.addEventListener("click", openMenu);
-    closeBtn.addEventListener("click", closeMenu);
-
-    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
-
-    window.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeMenu();
-    });
   }
-
-  // ===== Formspree submit =====
-  const form = document.getElementById("contactForm");
-  const statusEl = document.getElementById("formStatus");
-  const btn = document.getElementById("submitBtn");
-
-  if (form && statusEl && btn) {
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-
-      statusEl.textContent = "";
-      statusEl.className = "form-status";
-      btn.disabled = true;
-      btn.textContent = "Sending...";
-
-      try {
-        const formData = new FormData(form);
-        const response = await fetch(form.action, {
-          method: "POST",
-          body: formData,
-          headers: { "Accept": "application/json" }
-        });
-
-        if (response.ok) {
-          form.reset();
-          statusEl.className = "form-status success";
-          statusEl.textContent = "✅ Message sent! I’ll get back to you soon.";
-        } else {
-          statusEl.className = "form-status error";
-          statusEl.textContent = "❌ Message failed. Please email me directly.";
-        }
-      } catch {
-        statusEl.className = "form-status error";
-        statusEl.textContent = "❌ Network error. Please email me directly.";
-      } finally {
-        btn.disabled = false;
-        btn.textContent = "Send Message";
-      }
-    });
-  }
-
-  // ===== Projects filter =====
-  const filterButtons = document.querySelectorAll(".filter-btn");
-  const projectCards = document.querySelectorAll(".project-card");
-
-  if (filterButtons.length && projectCards.length) {
-    filterButtons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        filterButtons.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-
-        const filter = btn.dataset.filter;
-
-        projectCards.forEach(card => {
-          const tags = (card.dataset.tags || "").split(" ");
-          const show = filter === "all" || tags.includes(filter);
-
-          card.classList.toggle("hidden", !show);
-        });
-      });
-    });
-  }
-})();
+});
