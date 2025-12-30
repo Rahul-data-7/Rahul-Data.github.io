@@ -147,32 +147,59 @@ h1{
 }
 .chip-link:hover{ color: var(--text); background: rgba(255,255,255,.12); transform: translateY(-1px); }
 
-/* portrait (NO COLOR SHIFT) */
-.portrait-card{ width: min(380px, 92vw); margin-left:auto; }
+/* ===== HERO PHOTO (BORDER ANIMATES, PHOTO DOES NOT TINT) ===== */
+
+.portrait-card { width: min(380px, 92vw); margin-left: auto; }
+
+/* frame wrapper */
 .gradient-frame{
-  padding: 3px;
+  position: relative;
+  border-radius: 26px;
+  padding: 0;                 /* IMPORTANT: no padding on the wrapper */
+  overflow: hidden;           /* keeps corners clean */
+}
+
+/* animated border layer (ONLY this layer gets hue-rotate) */
+.gradient-frame::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  padding: 3px;               /* border thickness */
   border-radius: 26px;
   background: linear-gradient(135deg,#a78bfa,#22d3ee,#fb7185);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
   animation: hue 7s linear infinite;
-}
-@keyframes hue{ to{ filter:hue-rotate(360deg); } }
-
-/* IMPORTANT: stop any inherited filter/blend from touching the image */
-.gradient-frame .portrait{
-  filter: none !important;
-  mix-blend-mode: normal !important;
-  transform: none !important;
+  pointer-events:none;
 }
 
+/* inner area that holds the image (sits above border layer) */
+.gradient-frame .inner{
+  position: relative;
+  margin: 3px;                /* same as border thickness */
+  border-radius: 24px;
+  background: #111;
+  overflow: hidden;
+}
+
+/* photo: no filters EVER */
 .portrait{
   width: 100%;
   max-width: 320px;
   margin: 0 auto;
   aspect-ratio: 3/4;
   object-fit: cover;
-  border-radius: 24px;
-  background: #111;
+  border-radius: 0;           /* inner handles rounding */
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  will-change: auto;
 }
+
+@keyframes hue { to { filter: hue-rotate(360deg); } }
+
 
 .hero-mini{ margin-top: 12px; padding: 14px; border-radius: var(--r); }
 .mini-row{ display:flex; justify-content:space-between; gap: 10px; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
